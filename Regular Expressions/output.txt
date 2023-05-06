@@ -1,0 +1,56 @@
+match: positive testcase - match SSN
+Pattern:\d{3}-\d{2}-\d{4}
+Input:123-45-6789
+match? true
+
+match: negative testcase - match Phone number
+Pattern:\d{3}-\d{3}-\d{4}
+Input:123-45-6789
+match? false
+
+search: positive testcase - extract area code
+using non recursive smatch
+Pattern:(\d{3})-\d{3}-\d{4}
+Input:408-206-2335
+Sub matches:
+408
+
+search: negative testcase - extract area code
+using non recursive smatch
+Pattern:(\d{3})-\d{3}-\d{4}
+Input:123-45-6789
+
+search: find recurring duplicate words
+using recursive tokenizer(1)
+Pattern:(\b\w+\b)\s+\1
+Input:state of of the the art
+Sub matches:
+of
+the
+
+search: find recurring non duplicate words
+using recursive tokenizer(-1)
+Pattern:(\b\w+\b)\s+\1
+Input:state of of  the the art
+Sub matches:
+state 
+  
+ art
+
+replace: full replacement with new string
+Pattern:World
+Input:Hello, World!
+Replacement:Khri$ha
+result:Hello, Khri$ha!
+
+replace: full replacement with sub match
+Pattern:(\b\w+\b)\s+\1
+Input:state of of  the the art
+Replacement:$1
+result:state of  the art
+
+replace: internationalization with sweden locale
+Pattern:bättre
+Input:khri$ha är bättre
+Replacement:bäst😂
+result:khri$ha är bäst😂
