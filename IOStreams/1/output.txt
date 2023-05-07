@@ -1,0 +1,13 @@
+scanf: Enter a text from keyboard
+printf:  was entered from keyboard
+
+sprintf: Writing 100 to char array
+sscanf: Parsed number from char array is 100
+
+Opening output.txt file for write
+fprintf: Writing 1000 to output.txt file
+Closing output.txt file
+
+Opening output.txt file for read
+fscanf: Read 1000 from output.txt file
+Closing output.txt file

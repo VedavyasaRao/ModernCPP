@@ -1,0 +1,13 @@
+cin: Enter a text from keyboard
+cout:  was entered from keyboard
+
+stringstream: Writing 100 to string stream
+stringstream: Parased number from string stream is 100
+
+Opening output.txt file for write
+ofstream: Writing 1000 to output.txt file
+Closing output.txt file 
+
+Opening output.txt file for read
+ifstream: Read 1000 from output.txt file
+Closing output.txt file
