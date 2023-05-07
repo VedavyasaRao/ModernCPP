@@ -1,0 +1,74 @@
+****************************
+ios::manipulators for ostream
+****************************
+
+boolalpha example
+true is:true
+false is:false
+
+noboolalpha example
+true is:1
+false is:0
+
+showpos example
+1:+1
+
+noshowpos example
+1:1
+
+uppercase example
+1234: 0X4D2
+
+nouppercase example
+1234: 0x4d2
+
+oct hex dec example
+1234 in 
+oct:02322
+dec:1234
+hex:0x4d2
+
+showbase example
+1234: 0x4d2
+
+noshowbase example
+1234: 4d2
+
+setprecision(3) example
+1234.56795: 1234.568
+
+showpoint example
+1234.0: 1234.
+
+noshowpoint example
+1234.0: 1234
+
+left right internal example
+1234 with setw(10) setfill('$') 
+left:1234$$$$$$
+right:$$$$$$1234
+internal:$$$$$$1234
+
+fixed scientific hexfloat defaultfloat example
+1234.56 in 
+fixed:1234.56
+scientific:1.23e+03
+hexfloat:0x1.34a3d70a3d70ap+10
+defaultfloat:1.2e+03
+
+put_money example
+en_US: $12.34 or USD $12.34
+
+put_time example
+en_US: Fri 28 Apr 2023 06:44:31 AM UTC UTC
+
+quoted example
+Default delimiter case:
+read in     [quoted() quotes this string and embedded "quotes" too]
+stored as   ["quoted() quotes this string and embedded \"quotes\" too"]
+written out [quoted() quotes this string and embedded "quotes" too]
+
+Custom delimiter case:
+read in     [quoted() quotes this string and embedded $quotes$ $too]
+stored as   [$quoted() quotes this string and embedded %$quotes%$ %$too$]
+written out [quoted() quotes this string and embedded $quotes$ $too]

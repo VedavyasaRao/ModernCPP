@@ -1,0 +1,7 @@
+enter a number
+12
+the number is 12
+
+enter a number
+abc
+bad input

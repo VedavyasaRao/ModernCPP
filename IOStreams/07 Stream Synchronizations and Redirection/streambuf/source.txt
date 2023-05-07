@@ -1,0 +1,13 @@
+Reuse of same streambuf() Demo
+
+hexstream: Reusing cout.rdbuf() to initialize
+octstream: Reusing cout.rdbuf() to initialize
+
+cout: printing 1969 in decimal to console
+cout: 1969
+
+octstream: printing 1969 in oct to console
+octout: 03661
+
+hexstream: printing 1969 in hex to console
+hexout: 0x7b1

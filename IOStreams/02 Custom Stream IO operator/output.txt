@@ -1,0 +1,4 @@
+enter height and width as integers from keyboard
+creating rect from cin
+printing rect to cout
+height:100 width:200 

@@ -1,0 +1,7 @@
+Built-in stream redirection Demo
+
+stringstream: creating memory stream for read/write
+initializing clog redirection to stringstream
+
+clog: printing  "Hello, Khri$ha!"
+stringstream: received "Hello, Khri$ha!"

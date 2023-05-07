@@ -1,0 +1,39 @@
+****************************
+ios::manipulators for istream
+****************************
+
+boolalpha example
+true is:true
+false is:false
+
+noboolalpha example
+true is:1
+false is:0
+
+oct hex example
+0123 oct is decimal 83
+0xabc hex is decimal 2748
+
+
+skipws example
+Parsing "hello world!" yields "hello"  "world!"
+
+noskipws example
+Parsing "hello world!" yields "hello"  ""
+
+ws example
+"one 
+ 
+ 
+ two"
+getline Without ws yields a:one b: 
+getline With ws yields a:one b:two
+
+get_currency example
+"$1,234.56 2.22 USD  3.33"
+parsed as: 
+123456, 222, 333
+
+get_time example
+Parsing 2018-September-21 11:58:00 in US locale yields
+Fri Sep 21 11:58:00 2018 

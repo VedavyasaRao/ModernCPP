@@ -1,0 +1,15 @@
+File I/O example
+
+Opening file output.txt for write
+Writing Text to the file 
+Closing file 
+
+Opening file output.txt for read
+Reading from the file 
+
+Closing file 
+
+Dumping contents:
+
+hello, Khri$ha!
+how are you doing?

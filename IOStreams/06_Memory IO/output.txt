@@ -1,0 +1,9 @@
+Memory I/O example
+
+Writing Text to the string buffer 
+Reading from the string buffer 
+
+Dumping contents:
+
+hello, Khri$ha!
+how are you doing?

@@ -1,0 +1,15 @@
+Tie Demo
+
+Without tie() ifstream with ofstream
+ofstream: Opening output.txt for write
+ifstream: Opening output.txt for read
+ofstream: Writing "Hello" to output.txt
+ifstream: Reading from output.txt
+Read Value:""
+
+With tie() ifstream with ofstream
+ofstream: Opening output.txt for write
+ifstream: Opening output.txt for read
+ofstream: Writing "Hello" to output.txt
+ifstream: Reading from output.txt
+Read Value:"Hello"

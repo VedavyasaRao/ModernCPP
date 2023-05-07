@@ -1,0 +1,14 @@
+Parsing three integers a,b,c from 
+10 20 30
+
+a:10
+IO Flags
+good 
+
+b:20
+IO Flags
+good 
+
+c:30
+IO Flags
+eof

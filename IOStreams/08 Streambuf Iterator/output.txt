@@ -1,0 +1,7 @@
+streambuf_iterator iterator demo 
+
+stringstream: creating and initializing with "Hello, Khri$ha!"
+istreambuf_iterator: creating and initializing to stringstream
+ostreambuf_iterator: creating and initializing to cout
+streambuf_iterator: iterating read(stringstream)/write(cout) till eof
+Hello, Khri$ha!
