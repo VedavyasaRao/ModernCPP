@@ -1,0 +1,7 @@
+Default locale,
+  boolalpha  true: true
+  boolalpha false: false
+
+Locale with modified numpunct,
+  boolalpha  true: nija
+  boolalpha false: sullu

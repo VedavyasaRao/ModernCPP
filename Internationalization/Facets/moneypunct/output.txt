@@ -1,0 +1,54 @@
+en_US.utf8
+decimal point: '.'
+frac_digits: 2
+thousands_sep: ','
+grouping is {3,3,}
+currency symbol: '$'
+positive sign: ''
+negative sign: '-'
+pos format: {sign,symbol,value,none,}
+neg format: {sign,symbol,value,none,}
+
+en_IN.utf8
+decimal point: '.'
+frac_digits: 2
+thousands_sep: ','
+grouping is {3,2,}
+currency symbol: '₹'
+positive sign: ''
+negative sign: '-'
+pos format: {sign,symbol,space,value,}
+neg format: {sign,symbol,space,value,}
+
+ja_JP.utf8
+decimal point: '.'
+frac_digits: 0
+thousands_sep: ','
+grouping is {3,}
+currency symbol: '￥'
+positive sign: ''
+negative sign: '-'
+pos format: {symbol,sign,value,none,}
+neg format: {symbol,sign,value,none,}
+
+sv_SE.utf8
+decimal point: ','
+frac_digits: 2
+thousands_sep: ' '
+grouping is {3,3,}
+currency symbol: 'kr'
+positive sign: ''
+negative sign: '-'
+pos format: {sign,value,space,symbol,}
+neg format: {sign,value,space,symbol,}
+
+de_DE.utf8
+decimal point: ','
+frac_digits: 2
+thousands_sep: '.'
+grouping is {3,3,}
+currency symbol: '€'
+positive sign: ''
+negative sign: '-'
+pos format: {sign,value,space,symbol,}
+neg format: {sign,value,space,symbol,}

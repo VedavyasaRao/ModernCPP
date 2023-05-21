@@ -1,0 +1,47 @@
+Locale is en_US.utf-8
+date_order()
+The default date order is: no_order
+get_time("09:23:38 PM")
+Hours: 21, Minutes: 23, SSeconds: 38
+get_date("05/05/2023")
+Day: 5, Month: 5, Year: 2,023
+get_weekday("Friday")
+Week Day: 5
+get_monthname("May")
+Month: 5
+get_year("23")
+Year: 2,023
+get("2023-may-18 23:12:34")
+parsed date is : Thu 18 May 2023 11:12:34 PM UTC
+
+Locale is ja_JP.utf8
+date_order()
+The default date order is: no_order
+get_time("21時23分38秒")
+Hours: 21, Minutes: 23, SSeconds: 38
+get_date("2023年05月05日")
+Day: 5, Month: 5, Year: 2,023
+get_weekday("金曜日")
+Week Day: 5
+get_monthname("5月")
+Month: 5
+get_year("23")
+Year: 2,023
+get("2023年05月05日 21時23分38秒")
+parsed date is : 2023年05月05日 21時23分38秒
+
+Locale is de_DE.utf-8
+date_order()
+The default date order is: no_order
+get_time("21:23:38")
+Hours: 21, Minutes: 23, SSeconds: 38
+get_date("05.05.2023")
+Day: 5, Month: 5, Year: 2.023
+get_weekday("Freitag")
+Week Day: 5
+get_monthname("Mai")
+Month: 5
+get_year("23")
+Year: 2.023
+get("2023-mai-18 23:12:34")
+parsed date is : Do 18 Mai 2023 23:12:34 UTC

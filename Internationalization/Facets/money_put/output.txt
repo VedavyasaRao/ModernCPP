@@ -1,0 +1,2 @@
+American locale: $123,456.79
+Swedish locale: 123 456,79 kr

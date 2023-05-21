@@ -1,0 +1,4 @@
+Converted  1234567.890000 to 1,234,567.890000 in en_US.UTF-8
+Converted using put 1234567.890000 to 1,234,567.890000 in en_US.UTF-8
+Converted  1234567.890000 to 1.234.567,890000 in de_DE.UTF-8
+Converted  1234567.890000 to 12,34,567.890000 in en_IN.UTF-8

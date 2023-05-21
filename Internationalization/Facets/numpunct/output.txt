@@ -1,0 +1,35 @@
+Locale Name is en_US.UTF-8
+decimal point is .
+Example:3.14156
+thousands separator is ,
+Example:10,000,000
+numeric grouping is \03,\03,
+Example:10,000,000
+true name is true
+Example: 1 is true
+false name is false
+Example 0 is:false
+
+Locale Name is de_DE.UTF-8
+decimal point is ,
+Example:3,14156
+thousands separator is .
+Example:10.000.000
+numeric grouping is \03,\03,
+Example:10.000.000
+true name is true
+Example: 1 is true
+false name is false
+Example 0 is:false
+
+Locale Name is en_IN.UTF-8
+decimal point is .
+Example:3.14156
+thousands separator is ,
+Example:1,00,00,000
+numeric grouping is \03,\02,
+Example:1,00,00,000
+true name is true
+Example: 1 is true
+false name is false
+Example 0 is:false

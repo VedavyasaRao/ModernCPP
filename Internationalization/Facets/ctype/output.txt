@@ -1,0 +1,26 @@
+widen() of locale name string "kn_IN.UTF-8" is kn_IN.UTF-8
+narrow() of the string "ಖ್ರಿಷಾ Rao ೨೧/೦೯/೧೮" is "?????? Rao ??/??/??"
+Character classifications is() of each letter in "ಖ್ರಿಷಾ Rao ೨೧/೦೯/೧೮"
+ಖ is:  alnum  alpha  graph  print 
+್ is: 
+ರ is:  alnum  alpha  graph  print 
+ಿ is: 
+ಷ is:  alnum  alpha  graph  print 
+ಾ is: 
+  is:  print  space  blank 
+R is:  alnum  alpha  graph  print  upper 
+a is:  alnum  alpha  graph  lower  print  xdigit 
+o is:  alnum  alpha  graph  lower  print 
+  is:  print  space  blank 
+೨ is:  alnum  graph  print 
+೧ is:  alnum  graph  print 
+/ is:  graph  print  punct 
+೦ is:  alnum  graph  print 
+೯ is:  alnum  graph  print 
+/ is:  graph  print  punct 
+೧ is:  alnum  graph  print 
+೮ is:  alnum  graph  print 
+first scan_is() of alphabet in "ಖ್ರಿಷಾ Rao ೨೧/೦೯/೧೮" is 'R'
+first scan_not() of non alphabet alnum in "Rao ೨೧/೦೯/೧೮" is '೨'
+upper() of the string "ಖ್ರಿಷಾ Rao ೨೧/೦೯/೧೮" is "ಖ್ರಿಷಾ RAO ೨೧/೦೯/೧೮"
+lower() of the string "ಖ್ರಿಷಾ Rao ೨೧/೦೯/೧೮" is "ಖ್ರಿಷಾ rao ೨೧/೦೯/೧೮"

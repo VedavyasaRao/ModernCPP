@@ -1,0 +1,2 @@
+"$1.11 $2.22 $3.33" parsed with the I/O manipulator: 1.11 2.22 3.33 
+"USD  1,234.56" parsed with the facet directly: 1234.56

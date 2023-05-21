@@ -1,0 +1,20 @@
+Locale is sv_SE.utf8
+
+out()
+result = 0
+internal wchar_t string :khri$ha  r b st
+The string in narrow multibyte encoding: khri$ha är bäst😂
+
+in()
+external char_t string :khri$ha är bäst😂
+result = 0
+The string in wide encoding: khri$ha  r b st
+
+length()
+3 bytes would be consumed to produce är
+
+encoding()
+The encoding  is variable
+
+max_length()
+The longest multibyte character is 6 bytes long

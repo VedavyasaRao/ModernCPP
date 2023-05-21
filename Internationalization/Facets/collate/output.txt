@@ -1,0 +1,16 @@
+compare()
+Comparing "år" with "ängel"
+In the locale: C
+ängel before år
+In the locale: sv_SE.UTF-8
+år before ängel
+
+transform()
+In the locale: sv_SE.UTF-8
+Transfrom of år is ^U		
+Transfrom of ängel is _QJHO 					
+
+hash()
+In the locale: sv_SE.UTF-8
+Hash of år is 29426
+Hash of ängel is 61435671276

@@ -1,0 +1,4 @@
+Parsing 1,234,567.89 as double gives 1234567.890000 in en_US.utf8
+Parsing using get() 1,234,567.89 as double gives 1234567.890000 in en_US.utf8
+Parsing 1.234.567,89 as double gives 1234567.890000 in de_DE.UTF-8
+Parsing 12,34,567.89 as double gives 1234567.890000 in en_IN.UTF-8
