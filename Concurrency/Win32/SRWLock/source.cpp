@@ -10,12 +10,12 @@ DWORD WINAPI IncrementerFunction(LPVOID lpParam);
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
 
 SRWLOCK  srw = {};
-int	wcounter = {1};
-int rcounter = {1};
-DWORD   Indicies[MAX_THREADS];
+int	wcounter = { 1 };
+int rcounter = { 1 };
+
 struct SharedSRWHelper
 {
-	explicit SharedSRWHelper()
+	SharedSRWHelper()
 	{
 		AcquireSRWLockShared(&srw);
 	}
@@ -27,7 +27,7 @@ struct SharedSRWHelper
 
 struct ExclusiveSRWHelper
 {
-	explicit ExclusiveSRWHelper()
+	ExclusiveSRWHelper()
 	{
 		AcquireSRWLockExclusive(&srw);
 	}
@@ -44,13 +44,12 @@ int _tmain()
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		Indicies[i] = i + 1;
 		//create thread
 		hThread[i] = CreateThread(
 			NULL,                   // default security attributes
 			0,                      // use default stack size  
 			((i == 0) ? IncrementerFunction : ConsoleWriterFunction),       // thread function name
-			(LPVOID)&Indicies[i],   // argument to thread function 
+			NULL,   // argument to thread function 
 			NULL,					//default creation flags
 			NULL);          // returns the thread identifier 
 
@@ -66,6 +65,7 @@ int _tmain()
 
 	// Wait until all threads have terminated.
 	WaitForMultipleObjects(MAX_THREADS, hThread, TRUE, INFINITE);
+
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
 		// Close all thread handles and free memory allocations.
@@ -77,7 +77,7 @@ int _tmain()
 
 DWORD WINAPI IncrementerFunction(LPVOID lpParam)
 {
-	DWORD tid = *((DWORD*)lpParam);
+	DWORD tid = GetCurrentThreadId();
 	while (true)
 	{
 		try
@@ -100,38 +100,38 @@ DWORD WINAPI IncrementerFunction(LPVOID lpParam)
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
 	HANDLE hStdout;
-	DWORD tid = *((DWORD*)lpParam);
+	DWORD tid = GetCurrentThreadId();
 	while (true)
 	{
-		::Sleep(15);
 		try
 		{
 			SharedSRWHelper csh;
 			if (rcounter > MAX_COUNTER)
 				throw 1;
-			if (rcounter == wcounter)
+
+			if (rcounter != wcounter)
 			{
-				continue;
+				TCHAR msgBuf[BUF_SIZE];
+				size_t cchStringSize;
+				DWORD dwChars;
+
+				// Make sure there is a console to receive output results. 
+				hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
+				if (hStdout == INVALID_HANDLE_VALUE)
+					throw 2;
+
+				HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread Id %6ld: Value=%02d\n"),
+					tid, rcounter++);
+				// Print the parameter values using thread-safe functions.
+				StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
+				WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
 			}
-			TCHAR msgBuf[BUF_SIZE];
-			size_t cchStringSize;
-			DWORD dwChars;
-
-			// Make sure there is a console to receive output results. 
-			hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-			if (hStdout == INVALID_HANDLE_VALUE)
-				throw 2;
-
-			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread index %ld: Value=%02d\n"),
-				tid, rcounter++);
-			// Print the parameter values using thread-safe functions.
-			StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
-			WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
 		}
 		catch (...)
 		{
 			return 1;
 		}
+		::Sleep(15);
 	}
 	return 0;
 }

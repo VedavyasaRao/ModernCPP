@@ -9,11 +9,10 @@
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
 HANDLE hMutex = {};
 int counter = 1;
-DWORD   Indicies[MAX_THREADS];
 
 struct MutexHelper
 {
-	explicit MutexHelper()
+	MutexHelper()
 	{
 		auto dwWaitResult = WaitForSingleObject(
 			hMutex,    // handle to mutex
@@ -28,7 +27,6 @@ struct MutexHelper
 int _tmain()
 {
 	HANDLE  hThread[MAX_THREADS];
-	DWORD   dwThreadId[MAX_THREADS];
 
 	hMutex = CreateMutex(
 		NULL,              // default security attributes
@@ -42,19 +40,18 @@ int _tmain()
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		Indicies[i] = i + 1;
 		//create thread
 		hThread[i] = CreateThread(
 			NULL,                   // default security attributes
 			0,                      // use default stack size  
 			ConsoleWriterFunction,       // thread function name
-			(LPVOID)&Indicies[i],   // argument to thread function 
+			NULL,   // argument to thread function 
 			NULL,					//default creation flags
-			&dwThreadId[i]);          // returns the thread identifier 
+			NULL);          // returns the thread identifier 
 
-									  // Check the return value for success.
-									  // If CreateThread fails, terminate execution. 
-									  // This will automatically clean up threads and memory. 
+							// Check the return value for success.
+							// If CreateThread fails, terminate execution. 
+							// This will automatically clean up threads and memory. 
 		if (hThread[i] == NULL)
 		{
 			ExitProcess(3);
@@ -78,7 +75,7 @@ int _tmain()
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
 	HANDLE hStdout;
-	DWORD tid = *((DWORD*)lpParam);
+	DWORD tid = GetCurrentThreadId();
 	while (true)
 	{
 		try
@@ -97,7 +94,7 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 			if (hStdout == INVALID_HANDLE_VALUE)
 				throw 2;
 
-			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread index %ld: Value=%02d\n"),
+			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread Id %6ld: Value=%02d\n"),
 				tid, counter++);
 			// Print the parameter values using thread-safe functions.
 			StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);

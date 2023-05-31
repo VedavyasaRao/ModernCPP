@@ -8,7 +8,6 @@
 
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
 int counter = 1;
-DWORD   Indicies[MAX_THREADS];
 
 int _tmain()
 {
@@ -16,13 +15,12 @@ int _tmain()
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		Indicies[i] = i + 1;
 		//create thread
 		hThread[i] = CreateThread(
 			NULL,                   // default security attributes
 			0,                      // use default stack size  
 			ConsoleWriterFunction,       // thread function name
-			(LPVOID)&Indicies[i],   // argument to thread function 
+			NULL,		 // argument to thread function 
 			NULL,					//default creation flags
 			NULL);          // returns the thread identifier 
 
@@ -45,13 +43,12 @@ int _tmain()
 	}
 
 	return 0;
-
 }
 
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
 	HANDLE hStdout;
-	DWORD tid = *((DWORD*)lpParam);
+	DWORD tid = GetCurrentThreadId();
 	while (true)
 	{
 		try
@@ -68,7 +65,7 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 			if (hStdout == INVALID_HANDLE_VALUE)
 				throw 2;
 
-			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread index %ld: Value=%02d\n"),
+			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, TEXT("Thread Id %6ld: Value=%02d\n"),
 				tid, counter++);
 			// Print the parameter values using thread-safe functions.
 			StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
