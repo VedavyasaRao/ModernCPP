@@ -1,30 +1,21 @@
 #include <windows.h>
 #include <tchar.h>
 #include <strsafe.h>
+#pragma comment( lib, "Synchronization.lib" )
 
 #define BUF_SIZE 255
 #define  MAX_COUNTER 25
 #define  MAX_THREADS 2
 
-BOOL CALLBACK InitHandleFunction(PINIT_ONCE InitOnce, PVOID Parameter, PVOID *lpContext);
-DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
-HANDLE hMutex = {};
-int counter = 1;
+DWORD WINAPI IncrementerFunction(LPVOID lpParam);
+DWORD WINAPI WriterFunction(LPVOID lpParam);
 
-INIT_ONCE g_InitOnce = INIT_ONCE_STATIC_INIT;
+ULONG  IncrementerVar = {};
+ULONG WriterVar = {};
+ULONG DefaultVal = {};
 
+int counter = 0;
 
-struct MutexHelper
-{
-	MutexHelper()
-	{
-		WaitForSingleObject(hMutex, INFINITE);
-	}
-	~MutexHelper()
-	{
-		ReleaseMutex(hMutex);
-	}
-};
 
 int _tmain()
 {
@@ -33,11 +24,13 @@ int _tmain()
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		hThread[i] = CreateThread(NULL, 0, ConsoleWriterFunction, NULL, NULL, NULL);
+		hThread[i] = CreateThread(NULL, 0, ((i == 0) ? IncrementerFunction : WriterFunction),
+			NULL, NULL, NULL);
 		if (hThread[i] == NULL)
 		{
 			return 1;
 		}
+		Sleep(10);
 	}
 
 	WaitForMultipleObjects(MAX_THREADS, hThread, TRUE, INFINITE);
@@ -47,27 +40,29 @@ int _tmain()
 		CloseHandle(hThread[i]);
 	}
 
-	CloseHandle(hMutex);
 	printf("\nElapsed Time = %d MilliSeconds\n", (GetTickCount() - start_time));
 	return 0;
-
 }
 
-BOOL CALLBACK InitHandleFunction(PINIT_ONCE InitOnce, PVOID Parameter, PVOID *lpContext)
+DWORD WINAPI IncrementerFunction(LPVOID lpParam)
 {
-	printf("Creating mutex Thread Id:%d\n\n", GetCurrentThreadId());
-	hMutex = CreateMutex(NULL, FALSE, NULL);
-	if (hMutex == NULL)
+	while (true)
 	{
-		return FALSE;
+		if (counter > MAX_COUNTER)
+		{
+			WakeByAddressSingle(&WriterVar);
+			break;
+		}
+		++counter;
+		WakeByAddressSingle(&WriterVar);
+		WaitOnAddress(&IncrementerVar, &DefaultVal, sizeof(ULONG), INFINITE);
 	}
-	return TRUE;
+	return 0;
 }
 
 
-DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
+DWORD WINAPI WriterFunction(LPVOID lpParam)
 {
-	InitOnceExecuteOnce(&g_InitOnce, InitHandleFunction, NULL, NULL);
 	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
 	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
@@ -81,17 +76,21 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 
 	while (true)
 	{
+		if (counter > MAX_COUNTER)
 		{
-			MutexHelper mh;
+			WakeByAddressSingle(&IncrementerVar);
+			break;
+		}
 
-			if (counter > MAX_COUNTER)
-				break;
+		if (counter != 0)
+		{
+			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter);
 
-			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter++);
 			StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
 			WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
 		}
-		::Sleep(5);
+		WakeByAddressSingle(&IncrementerVar);
+		WaitOnAddress(&WriterVar, &DefaultVal, sizeof(ULONG), INFINITE);
 	}
 	return 0;
 }

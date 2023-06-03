@@ -6,19 +6,23 @@
 #define  MAX_COUNTER 25
 #define  MAX_THREADS 2
 
+BOOL CALLBACK InitHandleFunction(PINIT_ONCE InitOnce, PVOID Parameter, PVOID *lpContext);
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
-HANDLE hEvent = {};
+HANDLE hMutex = {};
 int counter = 1;
 
-struct EventHelper
+INIT_ONCE g_InitOnce = INIT_ONCE_STATIC_INIT;
+
+
+struct MutexHelper
 {
-	EventHelper()
+	MutexHelper()
 	{
-		WaitForSingleObject(hEvent, INFINITE);
+		WaitForSingleObject(hMutex, INFINITE);
 	}
-	~EventHelper()
+	~MutexHelper()
 	{
-		SetEvent(hEvent);
+		ReleaseMutex(hMutex);
 	}
 };
 
@@ -27,18 +31,12 @@ int _tmain()
 	auto start_time = GetTickCount();
 	HANDLE  hThread[MAX_THREADS];
 
-	hEvent = CreateEvent(NULL, FALSE, TRUE, NULL);
-	if (hEvent == NULL)
-	{
-		return 1;
-	}
-
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
 		hThread[i] = CreateThread(NULL, 0, ConsoleWriterFunction, NULL, NULL, NULL);
 		if (hThread[i] == NULL)
 		{
-			return 2;
+			return 1;
 		}
 	}
 
@@ -48,16 +46,36 @@ int _tmain()
 	{
 		CloseHandle(hThread[i]);
 	}
-	CloseHandle(hEvent);
 
-
+	CloseHandle(hMutex);
 	printf("\nElapsed Time = %d MilliSeconds\n", (GetTickCount() - start_time));
 	return 0;
 
 }
 
+void InitMutex()
+{
+	PVOID lpContext;
+	BOOL  bStatus;
+
+	bStatus = InitOnceExecuteOnce(&g_InitOnce, InitHandleFunction, NULL, &lpContext);
+}
+
+BOOL CALLBACK InitHandleFunction(PINIT_ONCE InitOnce, PVOID Parameter, PVOID *lpContext)
+{
+	printf("Creating mutex %d\n\n", GetCurrentThreadId());
+	hMutex = CreateMutex(NULL, FALSE, NULL);
+	if (hMutex == NULL)
+	{
+		return FALSE;
+	}
+	return TRUE;
+}
+
+
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
+	InitMutex();
 	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
 	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
@@ -72,7 +90,7 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 	while (true)
 	{
 		{
-			EventHelper eh;
+			MutexHelper mh;
 
 			if (counter > MAX_COUNTER)
 				break;
