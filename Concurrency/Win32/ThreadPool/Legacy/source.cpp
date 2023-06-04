@@ -5,26 +5,26 @@
 #define		BUF_SIZE 255
 #define		MAX_COUNTER 25
 
-TP_CALLBACK_ENVIRON cbe = {};
-VOID NTAPI ConsoleWriterFunction(PTP_CALLBACK_INSTANCE Instance, PVOID Context);
+DWORD CALLBACK ConsoleWriterFunction(LPVOID lpParam);
 HANDLE hsyncEventHandle = {};
 
 int _tmain()
 {
 	auto start_time = GetTickCount();
-	InitializeThreadpoolEnvironment(&cbe);
-	hsyncEventHandle = CreateEvent(NULL, FALSE, FALSE, NULL);
+	HANDLE  hThread;
+
+	hsyncEventHandle = CreateEvent(0, FALSE, FALSE, 0);
 	if (hsyncEventHandle == NULL)
 	{
 		return 1;
 	}
 
+	::Sleep(10);
 	for (int i = 1; i <= MAX_COUNTER; ++i)
 	{
-		TrySubmitThreadpoolCallback((PTP_SIMPLE_CALLBACK)ConsoleWriterFunction, (LPVOID)i, &cbe);
+		BOOL b = QueueUserWorkItem(ConsoleWriterFunction, (LPVOID)i, WT_EXECUTEDEFAULT);
 		WaitForSingleObject(hsyncEventHandle, INFINITE);
 	}
-	
 
 	CloseHandle(hsyncEventHandle);
 
@@ -32,9 +32,9 @@ int _tmain()
 	return 0;
 }
 
-VOID NTAPI ConsoleWriterFunction(PTP_CALLBACK_INSTANCE Instance, PVOID Context)
+DWORD CALLBACK ConsoleWriterFunction(LPVOID lpParam)
 {
-	int counter = (int)Context;
+	int counter = (int)lpParam;
 	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
 	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
@@ -50,6 +50,5 @@ VOID NTAPI ConsoleWriterFunction(PTP_CALLBACK_INSTANCE Instance, PVOID Context)
 	StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
 	WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
 	SetEvent(hsyncEventHandle);
-	Sleep(5);
+	return 0;
 }
-
