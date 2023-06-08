@@ -7,41 +7,41 @@
 
 using namespace std;
 using namespace std::chrono;
+using namespace std::chrono_literals;
 
-#define BUF_SIZE 255
-#define  MAX_COUNTER 25
-#define  MAX_THREADS 1
-int counter = 1;
-
-void ConsoleWriterFunction()
-{
-
-	while (true)
-	{
-		if (counter > MAX_COUNTER)
-			break;
-		cout << "Thread Id " << this_thread::get_id() << ": Value = " << counter++ << endl;
-		this_thread::sleep_for(chrono::milliseconds(5));
-	}
-}
 
 int main()
 {
-	auto start_time = system_clock::now();
-
-	thread  workers[MAX_THREADS];
-
-	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		workers[i] = thread(ConsoleWriterFunction);
+		cout << "get_id() example" << endl;
+		cout << "native_handle() example" << endl;
+		cout << "join() example" << endl;
+		cout << "hardware_concurrency() example" << endl;
+		cout << endl;
+		cout << "hardware_concurrency:" << thread::hardware_concurrency() << endl;
+		cout << "starting thread" << endl;
+		thread t([]() {});
+		cout << "id: " << t.get_id() << endl;
+		cout << "native handle: " << t.native_handle() << endl;
+		cout << "waiting for thread completion" << endl;
+		t.join();
+		cout << "thread ended" << endl;
+		cout << endl;
 	}
 
-
-	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		workers[i].join();
+		cout << "detach() example" << endl;
+		cout << endl;
+		promise<void> p;
+		auto f = p.get_future();
+		cout << "starting thread" << endl;
+		thread([](promise<void> p)
+		{
+			p.set_value();
+		}, move(p)).detach();
+		cout << "thread detached" << endl;
+		f.wait();
+		cout << "thread ended" << endl;
+		cout << endl;
 	}
-	auto dur = duration_cast<chrono::milliseconds>(system_clock::now() - start_time).count();
-	cout << endl << "Elapsed Time = " << dur << " MilliSeconds" << endl;
-
 }

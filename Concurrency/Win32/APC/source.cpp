@@ -2,7 +2,6 @@
 #include <tchar.h>
 #include <strsafe.h>
 
-#define		BUF_SIZE 255
 #define		MAX_COUNTER 25
 
 DWORD WINAPI APCThread(LPVOID lpParam);
@@ -44,19 +43,9 @@ DWORD WINAPI APCThread(LPVOID lpParam)
 void NTAPI ConsoleWriterFunction(ULONG_PTR Parameter)
 {
 	int counter = (int)Parameter;
-	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
-	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
-	TCHAR msgBuf[BUF_SIZE];
-	size_t cchStringSize;
-	DWORD dwChars;
 
-	hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-	if (hStdout == INVALID_HANDLE_VALUE)
-		return;
+	printf("Thread Id %6ld: Value=%02d\n", tid, counter);
 
-	HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter);
-	StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
-	WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
 	::Sleep(5);
 }

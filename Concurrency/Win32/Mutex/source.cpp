@@ -2,7 +2,6 @@
 #include <tchar.h>
 #include <strsafe.h>
 
-#define BUF_SIZE 255
 #define  MAX_COUNTER 25
 #define  MAX_THREADS 2
 

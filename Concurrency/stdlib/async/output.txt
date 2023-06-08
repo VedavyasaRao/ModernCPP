@@ -1,27 +1,23 @@
-hread Id 3264: Value = 1
-Thread Id 3264: Value = 2
-Thread Id 3264: Value = 3
-Thread Id 3264: Value = 4
-Thread Id 3264: Value = 5
-Thread Id 3264: Value = 6
-Thread Id 3264: Value = 7
-Thread Id 3264: Value = 8
-Thread Id 3264: Value = 9
-Thread Id 3264: Value = 10
-Thread Id 3264: Value = 11
-Thread Id 3264: Value = 12
-Thread Id 3264: Value = 13
-Thread Id 3264: Value = 14
-Thread Id 3264: Value = 15
-Thread Id 3264: Value = 16
-Thread Id 3264: Value = 17
-Thread Id 3264: Value = 18
-Thread Id 3264: Value = 19
-Thread Id 3264: Value = 20
-Thread Id 3264: Value = 21
-Thread Id 3264: Value = 22
-Thread Id 3264: Value = 23
-Thread Id 3264: Value = 24
-Thread Id 3264: Value = 25
+async(launch::async) -  value example
+status:ready!
+is valid:true
+result:5
+is valid:false
 
-Elapsed Time = 393 MilliSeconds
+async(launch::async) -  exception example
+status:ready!
+is valid:true
+exception:overflow
+is valid:true
+
+async(launch::deferred) -  value example
+status:deferred
+is valid:true
+result:2
+is valid:false
+
+async(launch::deferred) -  exception example
+status:deferred
+is valid:true
+exception:underflow
+is valid:false
