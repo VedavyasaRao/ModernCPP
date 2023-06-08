@@ -2,7 +2,6 @@
 #include <tchar.h>
 #include <strsafe.h>
 
-#define		BUF_SIZE 255
 #define		MAX_COUNTER 25
 
 TP_CALLBACK_ENVIRON cbe = {};
@@ -27,6 +26,7 @@ int _tmain()
 	
 
 	CloseHandle(hsyncEventHandle);
+	DestroyThreadpoolEnvironment(&cbe);
 
 	printf("\nElapsed Time = %d MilliSeconds\n", (GetTickCount() - start_time));
 	return 0;
@@ -35,20 +35,9 @@ int _tmain()
 VOID NTAPI ConsoleWriterFunction(PTP_CALLBACK_INSTANCE Instance, PVOID Context)
 {
 	int counter = (int)Context;
-	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
-	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
-	TCHAR msgBuf[BUF_SIZE];
-	size_t cchStringSize;
-	DWORD dwChars;
 
-	hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-	if (hStdout == INVALID_HANDLE_VALUE)
-		return;
-
-	HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter);
-	StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
-	WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
+	printf("Thread Id %6ld: Value=%02d\n",tid,counter);
 	SetEvent(hsyncEventHandle);
 	Sleep(5);
 }

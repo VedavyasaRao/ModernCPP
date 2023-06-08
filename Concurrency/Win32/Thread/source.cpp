@@ -3,7 +3,6 @@
 #include <strsafe.h>
 #include <ctime>
 
-#define BUF_SIZE 255
 #define  MAX_COUNTER 25
 #define  MAX_THREADS 1
 
@@ -18,7 +17,7 @@ int _tmain()
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
-		hThread[i] = CreateThread(NULL, 0, ConsoleWriterFunction, NULL, NULL,	NULL);
+		hThread[i] = CreateThread(NULL, 0, ConsoleWriterFunction, NULL, NULL, NULL);
 		if (hThread[i] == NULL)
 		{
 			return 1;
@@ -38,25 +37,14 @@ int _tmain()
 
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
-	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
-	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
-	TCHAR msgBuf[BUF_SIZE];
-	size_t cchStringSize;
-	DWORD dwChars;
-
-	hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-	if (hStdout == INVALID_HANDLE_VALUE)
-		return 1;
 
 	while (true)
 	{
 		if (counter > MAX_COUNTER)
 			break;
 
-		HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter++);
-		StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
-		WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
+		printf("Thread Id %6ld: Value=%02d\n", tid, counter++);
 
 		::Sleep(5);
 	}

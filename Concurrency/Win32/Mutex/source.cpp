@@ -11,9 +11,6 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam);
 HANDLE hMutex = {};
 int counter = 1;
 
-INIT_ONCE g_InitOnce = INIT_ONCE_STATIC_INIT;
-
-
 struct MutexHelper
 {
 	MutexHelper()
@@ -30,6 +27,12 @@ int _tmain()
 {
 	auto start_time = GetTickCount();
 	HANDLE  hThread[MAX_THREADS];
+
+	hMutex = CreateMutex(NULL, FALSE, NULL);
+	if (hMutex == NULL)
+	{
+		return FALSE;
+	}
 
 	for (int i = 0; i < MAX_THREADS; ++i)
 	{
@@ -53,31 +56,10 @@ int _tmain()
 
 }
 
-BOOL CALLBACK InitHandleFunction(PINIT_ONCE InitOnce, PVOID Parameter, PVOID *lpContext)
-{
-	printf("Creating mutex Thread Id:%d\n\n", GetCurrentThreadId());
-	hMutex = CreateMutex(NULL, FALSE, NULL);
-	if (hMutex == NULL)
-	{
-		return FALSE;
-	}
-	return TRUE;
-}
-
 
 DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 {
-	InitOnceExecuteOnce(&g_InitOnce, InitHandleFunction, NULL, NULL);
-	HANDLE hStdout;
 	DWORD tid = GetCurrentThreadId();
-	TCHAR Format[] = TEXT("Thread Id %6ld: Value=%02d\n");
-	TCHAR msgBuf[BUF_SIZE];
-	size_t cchStringSize;
-	DWORD dwChars;
-
-	hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-	if (hStdout == INVALID_HANDLE_VALUE)
-		return 1;
 
 	while (true)
 	{
@@ -87,9 +69,8 @@ DWORD WINAPI ConsoleWriterFunction(LPVOID lpParam)
 			if (counter > MAX_COUNTER)
 				break;
 
-			HRESULT hr = StringCchPrintf(msgBuf, BUF_SIZE, Format, tid, counter++);
-			StringCchLength(msgBuf, BUF_SIZE, &cchStringSize);
-			WriteConsole(hStdout, msgBuf, (DWORD)cchStringSize, &dwChars, NULL);
+			printf("Thread Id %6ld: Value=%02d\n", tid, counter++);
+
 		}
 		::Sleep(5);
 	}
