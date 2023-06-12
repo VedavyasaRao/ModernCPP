@@ -39,15 +39,13 @@ int main()
 		cout << "sleeping for 3 secs  from ";
 		auto now = std::chrono::system_clock::now();
 		auto in_time_t = chrono::system_clock::to_time_t(now);
-		auto tm = *std::localtime(&in_time_t);
-		cout << put_time(&tm, "%A %c");
+		cout << put_time(std::localtime(&in_time_t), "%c");
 		cout << endl;
 		auto ts = now + 3s;
 		this_thread::sleep_until(ts);
 		now = std::chrono::system_clock::now();
 		in_time_t = chrono::system_clock::to_time_t(now);
-		tm = *std::localtime(&in_time_t);
 		cout << "current time:";
-		cout << put_time(&tm, "%A %c");
+		cout << put_time(std::localtime(&in_time_t), "%c");
 	}
 }
