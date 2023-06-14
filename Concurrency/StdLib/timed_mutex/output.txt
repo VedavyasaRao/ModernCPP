@@ -1,0 +1,6 @@
+main thread:owning mutex
+main thread:creating worker thread
+worker thread:waiting  on mutex for 5 seconds
+main thread:sleeping for 3 seconds
+main thread:unlocking mutex
+worker thread:hello world
