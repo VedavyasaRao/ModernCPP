@@ -1,7 +1,7 @@
 create table A
-creating table
+creating table without data
 insert data to table A
 inserting data
 create table B and insert data
-creating table
+creating table with data
 inserting data
