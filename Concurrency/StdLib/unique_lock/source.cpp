@@ -1,62 +1,109 @@
 #include <mutex>
 #include <thread>
 #include <iostream>
+#include <iomanip>
+#include <fstream>
 #include <vector>
 #include <functional>
 #include <chrono>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
-struct table
-{
-	table(int id) :id(id) {}
-	int id;
-	mutex m;
-};
+mutex m;
+timed_mutex tmt;
+mutex w;
+int counter = 1;
+ostream off(cout.rdbuf());
 
-struct waiter
+void print(bool b, int counter)
 {
-	waiter(int id) :id(id) {}
-	int id;
-	mutex m;
-};
+	lock_guard<mutex> lw(w);
+	cout << "Thread Id ";
+	cout << setw(6) << setfill(' ') << this_thread::get_id();
+	cout << "  ";
+	if (b)
+		cout << setw(2) << setfill('0') << counter;
+	else
+		off << "no lock";
+	cout << endl;
 
-void assign_waiter(table &t, waiter &w)
+}
+
+void increment()
 {
-	static mutex io_mutex;
+	unique_lock<mutex> l(m);
+	for (int i = 0; i < 5; ++i)
 	{
-		lock_guard<mutex> lk(io_mutex);
-		cout << "table " << t.id << " and waiter " << w.id << " are waiting for assignment" << endl;
-	}
-
-	{
-		lock(t.m, w.m);
-		lock_guard<mutex> lk1(t.m, adopt_lock);
-		lock_guard<mutex> lk2(w.m, adopt_lock);
-		{
-			lock_guard<mutex> lk(io_mutex);
-			cout << "table " << t.id << " and waiter " << w.id << " are assigned" << endl;
-		}
-		this_thread::sleep_for(3s);
-		{
-			lock_guard<mutex> lk(io_mutex);
-			cout << "table " << t.id << "  clean up" << endl;
-		}
+		l.unlock();
+		this_thread::sleep_for(chrono::microseconds(rand() % 1000));
+		l.lock();
+		print(true, counter++);
 	}
 }
 
+void increment2()
+{
+	unique_lock<mutex> l(m);
+	bool b = true;
+	while (counter <= 10)
+	{
+		if (b)
+			l.unlock();
+		this_thread::sleep_for(chrono::microseconds(rand() % 1000));
+		b = l.try_lock();
+		if (b)
+			print(b, counter++);
+		else
+			print(b, counter);
+	}
+
+}
+
+void increment3()
+{
+	unique_lock<timed_mutex> l(tmt);
+	bool b = true;
+	while (counter <= 10)
+	{
+		if (b)
+			l.unlock();
+		b = l.try_lock_for(chrono::microseconds(rand() % 1000));
+		if (b)
+			print(b, counter++);
+		else
+			print(b, counter);
+	}
+}
+
+
 int main()
 {
-	table  t{ 1 }, t2{ 2 };
-	waiter w{ 1 }, w2{ 2 };
+	{
+		cout << endl << "lock() demo" << endl << endl;
+		vector<thread> threads;
+		threads.emplace_back(increment);
+		threads.emplace_back(increment);
+		for (auto &thread : threads) thread.join();
+	}
 
-	vector<thread> threads;
-	threads.emplace_back(assign_waiter, ref(t), ref(w));
-	threads.emplace_back(assign_waiter, ref(t2), ref(w));
-	threads.emplace_back(assign_waiter, ref(t2), ref(w2));
-	threads.emplace_back(assign_waiter, ref(t), ref(w2));
+	{
+		cout << endl << "try_lock() demo" << endl << endl;
+		vector<thread> threads;
+		counter = 1;
+		threads.emplace_back(increment2);
+		threads.emplace_back(increment2);
+		for (auto &thread : threads) thread.join();
+	}
 
-	for (auto &thread : threads) thread.join();
+	{
 
+		cout << endl << "try_lock_for() demo" << endl << endl;
+		vector<thread> threads;
+		counter = 1;
+		threads.emplace_back(increment3);
+		threads.emplace_back(increment3);
+		for (auto &thread : threads) thread.join();
+	}
 }

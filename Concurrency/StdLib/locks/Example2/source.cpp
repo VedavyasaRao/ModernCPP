@@ -21,7 +21,7 @@ void transfer_funds(account &f, account &t)
 {
 	static mutex io_mutex;
 	{
-		lock_guard<mutex> lk(io_mutex);
+		lock_guard<mutex> io(io_mutex);
 		cout << "account " << f.id << " and account " << t.id << " are waiting for assignment" << endl;
 	}
 
@@ -30,7 +30,7 @@ void transfer_funds(account &f, account &t)
 		unique_lock<mutex> lk2(t.m, defer_lock);
 		lock(lk, lk2);
 		{
-			lock_guard<mutex> lk(io_mutex);
+			lock_guard<mutex> io(io_mutex);
 			cout << endl;
 			cout << "account " << f.id << " and account " << t.id << " are assigned" << endl;
 			t.balance += 100;
@@ -38,9 +38,11 @@ void transfer_funds(account &f, account &t)
 			cout << "balance of account " << f.id << " is  " << f.balance << endl;
 			cout << "balance of account " << t.id << " is  " << t.balance << endl;
 		}
+        
 		this_thread::sleep_for(3s);
+        
 		{
-			lock_guard<mutex> lk(io_mutex);
+			lock_guard<mutex> io(io_mutex);
 			cout << "account " << f.id << " is free and account " << t.id << " is free" << endl;
 
 		}
@@ -49,16 +51,16 @@ void transfer_funds(account &f, account &t)
 
 int main()
 {
-	account govt_acct{ "sam",1000 }, beneficiary_acct{ "rob", 100 }, beneficiary_acct2{ "steve", 50 };
+	account sam_acct{ "sam",1000 }, rob_acct{ "rob", 100 }, steve_acct{ "steve", 50 };
 
-	cout << "balance of " << govt_acct.id << " is " << govt_acct.balance << endl;
-	cout << "balance of " << beneficiary_acct.id << " is " << beneficiary_acct.balance << endl;
-	cout << "balance of " << beneficiary_acct2.id << " is " << beneficiary_acct2.balance << endl;
+	cout << "balance of " << sam_acct.id << " is " << sam_acct.balance << endl;
+	cout << "balance of " << rob_acct.id << " is " << rob_acct.balance << endl;
+	cout << "balance of " << steve_acct.id << " is " << steve_acct.balance << endl;
 	cout << endl;
 
 	vector<thread> threads;
-	threads.emplace_back(transfer_funds, ref(govt_acct), ref(beneficiary_acct));
-	threads.emplace_back(transfer_funds, ref(govt_acct), ref(beneficiary_acct2));
+	threads.emplace_back(transfer_funds, ref(sam_acct), ref(rob_acct));
+	threads.emplace_back(transfer_funds, ref(sam_acct), ref(steve_acct));
 
 	for (auto &thread : threads) thread.join();
 
