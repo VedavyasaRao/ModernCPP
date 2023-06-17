@@ -76,7 +76,7 @@ void transfer_funds(account &f, account &t, bool bthrow)
 			cout << "balance of account " << f.id << " is  " << f.balance << endl;
 			cout << "balance of account " << t.id << " is  " << t.balance << endl;
 		}
-		this_thread::sleep_for(3s);
+		this_thread::sleep_for(chrono::seconds(3));
 		{
 			lock_guard<mutex> io(io_mutex);
 			cout << "account " << f.id << " is free and account " << t.id << " is free" << endl;

@@ -10,6 +10,9 @@
 #include <future>
 
 using namespace std;
+using namespace std::chrono;
+
+
 mutex io_mutex;
 once_flag balance_init;
 struct account
@@ -70,7 +73,7 @@ void transfer_funds(account &f, account &t, bool bthrow)
 			cout << "balance of account " << t.id << " is  " << t.balance << endl;
 		}
 
-		this_thread::sleep_for(3s);
+		this_thread::sleep_for(chrono::seconds(3));
 		{
 			lock_guard<mutex> io(io_mutex);
 			cout << "account " << f.id << " is free and account " << t.id << " is free" << endl;
