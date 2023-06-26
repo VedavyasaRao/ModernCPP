@@ -1,0 +1,30 @@
+load,store and atomic_exchange_explicit demo
+
+Thread Id:140551680354048 waiting 
+
+Thread Id:140551680354048 acquiring 
+
+Thread Id:140551688746752 waiting 
+
+Thread Id:140551663568640 waiting 
+
+Thread Id:140551671961344 waiting 
+
+Thread Id:140551655175936 waiting 
+Thread Id:140551680354048 releaseing
+
+Thread Id:140551655175936 acquiring 
+Thread Id:140551655175936 releaseing
+
+Thread Id:140551688746752 acquiring 
+Thread Id:140551688746752 releaseing
+
+Thread Id:140551663568640 acquiring 
+Thread Id:140551663568640 releaseing
+
+Thread Id:140551671961344 acquiring 
+Thread Id:140551671961344 releaseing
+
+atomic_compare_exchange_weak_explicit demo
+items in stack
+9 8 2 7 1 5 3 6 0 4 
