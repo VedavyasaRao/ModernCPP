@@ -1,0 +1,16 @@
+balance of sam is 1000
+balance of rob is 100
+balance of steve is 50
+
+account sam and account rob are waiting for assignment
+
+account sam and account rob are assigned
+balance of account sam is  900
+balance of account rob is  200
+account sam and account steve are waiting for assignment
+account sam is free and account rob is free
+
+account sam and account steve are assigned
+balance of account sam is  800
+balance of account steve is  150
+account sam is free and account steve is free

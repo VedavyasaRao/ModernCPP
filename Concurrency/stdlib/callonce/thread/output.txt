@@ -1,0 +1,23 @@
+threadid: 7120 enter initbalance()
+threadid: 6940 enter initbalance()
+balance of sam is 1000
+balance of rob is 100
+balance of steve is 200
+threadid: 6940 exit initbalance()
+
+threadid: 6940 enter transfer_funds()
+account sam and account steve are waiting for assignment
+
+account sam and account steve are assigned
+balance of account sam is  900
+balance of account steve is  300
+threadid: 4300 enter transfer_funds()
+account sam and account rob are waiting for assignment
+account sam is free and account steve is free
+threadid: 6940 exit transfer_funds()
+
+account sam and account rob are assigned
+balance of account sam is  800
+balance of account rob is  200
+account sam is free and account rob is free
+threadid: 4300 exit transfer_funds()

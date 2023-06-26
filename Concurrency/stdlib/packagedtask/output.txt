@@ -1,0 +1,28 @@
+packaged_task -  value example
+status:ready!
+is valid:true
+result:2
+is valid:false
+
+packaged_task -  reset() example
+status:ready!
+is valid:true
+result:5
+is valid:false
+
+packaged_task -  exception example
+packaged_task -  valid() example
+function valid:true
+status:ready!
+is valid:true
+result:exception:overflow
+is valid:false
+
+packaged_task -  make_ready_at_thread_exit() example
+worker thread start
+status:timeout
+worker thread end
+status:ready!
+is valid:true
+result:10
+is valid:false

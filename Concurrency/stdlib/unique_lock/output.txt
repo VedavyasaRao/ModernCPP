@@ -1,0 +1,51 @@
+lock() demo
+
+Thread Id   3188  01
+Thread Id   7712  02
+Thread Id   3188  03
+Thread Id   3188  04
+Thread Id   7712  05
+Thread Id   3188  06
+Thread Id   7712  07
+Thread Id   7712  08
+Thread Id   3188  09
+Thread Id   7712  10
+
+try_lock() demo
+
+Thread Id   1436  01
+Thread Id  10688  no lock
+Thread Id  10688  02
+Thread Id   1436  no lock
+Thread Id   1436  03
+Thread Id  10688  no lock
+Thread Id  10688  04
+Thread Id   1436  no lock
+Thread Id   1436  05
+Thread Id  10688  no lock
+Thread Id  10688  06
+Thread Id   1436  no lock
+Thread Id   1436  07
+Thread Id  10688  no lock
+Thread Id  10688  08
+Thread Id   1436  no lock
+Thread Id   1436  09
+Thread Id  10688  no lock
+Thread Id  10688  10
+Thread Id   1436  no lock
+
+try_lock_for() demo
+
+Thread Id   9268  01
+Thread Id   9268  02
+Thread Id  10476  03
+Thread Id  10476  04
+Thread Id   9268  no lock
+Thread Id  10476  05
+Thread Id  10476  06
+Thread Id   9268  no lock
+Thread Id  10476  07
+Thread Id   9268  08
+Thread Id   9268  09
+Thread Id  10476  no lock
+Thread Id   9268  10
