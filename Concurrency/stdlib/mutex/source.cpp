@@ -5,14 +5,15 @@
 #include <exception>
 #include <stdexcept>
 #include <chrono>
+#include <mutex>
 
 using namespace std;
 using namespace std::chrono;
 
 #define  MAX_COUNTER 25
-#define  MAX_THREADS 1
+#define  MAX_THREADS 3
 int counter = 1;
-
+mutex m;
 void ConsoleWriterFunction()
 {
 
@@ -20,12 +21,14 @@ void ConsoleWriterFunction()
 	{
 		if (counter > MAX_COUNTER)
 			break;
+        m.lock();
 		cout << "Thread Id ";
 		cout << setw(6) << setfill(' ') << this_thread::get_id();
 		cout << ": Value = ";
 		cout << setw(2) << setfill('0') << counter++;
 		cout << endl;
 		this_thread::sleep_for(chrono::milliseconds(5));
+        m.unlock();
 	}
 }
 

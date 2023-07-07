@@ -1,0 +1,5 @@
+<style type="text/css">
+  .gist-file
+  .gist-data {max-height: 100px;}
+</style>
+<script src="https://gist.github.com/VedavyasaRao/75da08fc5c79d3b5b4f49336af144e47.js"></script>

@@ -1,0 +1,8 @@
+f(int a)
+f(0)
+
+f(void* a)
+f(0)
+
+f(void* a)
+f(0)

@@ -11,8 +11,9 @@ std::timed_mutex test_mutex;
 void f()
 {
 	cout << "worker thread:waiting  on mutex for 5 seconds" << endl;
-	test_mutex.try_lock_for(5s);
-	cout << "worker thread:hello world" << endl;
+	auto b = test_mutex.try_lock_for(chrono::seconds(5));
+    if (b)
+	   cout << "worker thread:hello world" << endl;
 	test_mutex.unlock();
 }
 
