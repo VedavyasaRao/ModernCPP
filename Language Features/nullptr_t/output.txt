@@ -1,8 +1,11 @@
+f(0);
 f(int a)
 f(0)
 
+f((void*)NULL);
 f(void* a)
 f(0)
 
+f(nullptr);
 f(void* a)
 f(0)

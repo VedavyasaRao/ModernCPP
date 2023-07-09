@@ -18,7 +18,11 @@ void f(void* a)
 
 int main()
 {
+    cout << "f(0);" << endl;
     f(0);
+    
+    cout << "f((void*)NULL);" << endl;
     f((void*)NULL);
+    cout << "f(nullptr);" << endl;
     f(nullptr);
 }
