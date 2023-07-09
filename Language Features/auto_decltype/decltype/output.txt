@@ -1,0 +1,39 @@
+decltype demo
+//int
+auto i=0;
+decltype(i) i2=i;
+(typeid(i) == typeid(i2)) = true
+
+//long
+auto l=10l;
+decltype(l) l2=l;
+(typeid(l) == typeid(l2)) = true
+
+//long long
+auto ll=10ll;
+decltype(ll) ll2=ll;
+(typeid(ll) == typeid(ll2)) = true
+
+//float
+auto f=5.f;
+decltype(f) f2=f;
+(typeid(f) == typeid(f2)) = true
+
+//double
+auto d=5.;
+decltype(d) d2=d;
+(typeid(f) == typeid(f2)) = true
+
+//vector<int>::iterator
+auto itr=vec.begin();
+decltype(itr) itr2=itr;
+(typeid(itr) == typeid(itr2)) = true
+
+//lambda
+auto lam = [](){cout << "hello, world!";};
+decltype(lam) lam2=lam;
+(typeid(lam) == typeid(lam2)) = true
+
+template <typename U, typename V>
+auto add(U u, V v)->decltype(u+v) {    return u+v; };
+add<float,int>(3.5,10) = 13.5
