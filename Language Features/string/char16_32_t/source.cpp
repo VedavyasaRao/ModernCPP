@@ -11,8 +11,7 @@ using namespace std;
 
 void NarrowtoUTF16()
 {
-    std::string str = "z\u00df\u6c34\U0001F34C"; // or u8"zß水🍌"
- 
+    string str(u8"ಖ್ರಿಷಾ Rao🍌"); //"\u0c96\u0ccd\u0cb0\u0cbf\u0cb7\u0cbe rao\U0001F34C"
     cout << "Processing " << str.size() << " bytes: [ " << showbase;
     for (unsigned char c: str)
         cout << hex << +c << ' ';
@@ -45,7 +44,7 @@ void NarrowtoUTF16()
 
 void UTF16toNarrow()
 {
-    u16string strv = u"zß水🍌"; // or z\u00df\u6c34\U0001F34C
+    u16string strv = u"ಖ್ರಿಷಾ Rao🍌"; //"\u0c96\u0ccd\u0cb0\u0cbf\u0cb7\u0cbe rao\U0001F34C"
     cout << "Processing " << strv.size() << " UTF-16 code units: [ ";
     for (char16_t c : strv)
         cout << showbase << hex << static_cast<int>(c) << ' ';
@@ -58,7 +57,7 @@ void UTF16toNarrow()
         size_t rc = c16rtomb(out, c, &state);
         cout << static_cast<int>(c) << " converted to [ ";
         if (rc != (size_t) - 1)
-            for (unsigned char c8 : string_view{out, rc})
+            for (unsigned char c8 : string(out, rc))
                 cout << +c8 << ' ';
         cout << "]\n";
     }
@@ -66,7 +65,7 @@ void UTF16toNarrow()
 
 void NarrowtoUTF32()
 {
-    std::string str = "z\u00df\u6c34\U0001F34C"; // or u8"zß水🍌"
+    string str(u8"ಖ್ರಿಷಾ Rao🍌"); //"\u0c96\u0ccd\u0cb0\u0cbf\u0cb7\u0cbe rao\U0001F34C"
  
     cout << "Processing " << str.size() << " bytes: [ " << showbase;
     for (unsigned char c : str)
@@ -97,7 +96,7 @@ void NarrowtoUTF32()
 
 void UTF32toNarrow()
 {
-    u32string strv = U"zß水🍌"; // or z\u00df\u6c34\U0001F34C
+    u32string strv = U"ಖ್ರಿಷಾ Rao🍌"; //"\u0c96\u0ccd\u0cb0\u0cbf\u0cb7\u0cbe rao\U0001F34C"
     cout << "Processing " << strv.size() << " UTF-32 code units: [ ";
     for (char32_t c : strv)
         cout << showbase << hex << static_cast<int>(c) << ' ';
@@ -110,7 +109,7 @@ void UTF32toNarrow()
         size_t rc = c32rtomb(out, c, &state);
         cout << static_cast<int>(c) << " converted to [ ";
         if (rc != (size_t) - 1)
-            for (unsigned char c8 : string_view{out, rc})
+            for (unsigned char c8 : string{out, rc})
                 cout << +c8 << ' ';
         cout << "]\n";
     }
