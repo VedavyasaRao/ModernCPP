@@ -1,14 +1,14 @@
 struct Rectangle
 {
-    int _h, _w;
-    // A constexpr constructor
-    constexpr Rectangle(int h, int w) : _h(h), _w(w) {}
+	int h, w;
+	// A constexpr constructor
+	constexpr Rectangle(int h, int w) : h(h), w(w) {}
 };
- 
-constexpr int getArea(const Rectangle& r)  { return r._h * r._w; } 
+
+constexpr int getArea(const Rectangle& r) { return r.h * r.w; }
 
 int main()
 {
-    constexpr Rectangle r(10, 20);
-    static_assert((200 == getArea(r)));
+	constexpr Rectangle r{ 10, 20 };
+	static_assert((200 == getArea(r)), "compile time");
 }

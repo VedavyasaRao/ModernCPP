@@ -12,8 +12,3 @@ operator=(&&): 1845
 copy constructor(&&): 1845
 operator=(&&):in 1643
 operator=(&&):in 1643
-
-destructor
-destructor
-destructor
-destructor
