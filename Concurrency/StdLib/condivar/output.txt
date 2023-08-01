@@ -1,11 +1,49 @@
-140165793683200: received message hello,
-140165776897792: received message hello,
-140165785290496: received message hello,
+wait() demo
 
-140165793683200: received message Khrisha!
-140165785290496: received message Khrisha!
-140165776897792: received message Khrisha!
+ 15040: starting
+ 24372: starting
 
-140165776897792: exiting
-140165785290496: exiting
-140165793683200: exiting
+ 24372: received message hello,
+ 15040: received message hello,
+
+ 15040: received message Khrisha!
+ 24372: received message Khrisha!
+
+ 15040: exiting
+ 24372: exiting
+
+
+wait(cb) demo
+
+ 22084: starting
+ 27120: starting
+
+ 27120: received message hello,
+ 22084: received message hello,
+
+ 27120: received message Khrisha!
+ 22084: received message Khrisha!
+
+spurious wakeup
+ 27120: received message
+ 22084: received message
+
+ 22084: exiting
+ 27120: exiting
+
+
+wait_for() demo
+
+  5172: starting
+ 32380: starting
+
+ 32380: received message hello,
+  5172: received message hello,
+
+  5172: received message Khrisha!
+ 32380: received message Khrisha!
+
+  5172: timeout
+ 32380: timeout
+ 32380: exiting
+  5172: exiting
