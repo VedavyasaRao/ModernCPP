@@ -1,0 +1,8 @@
+prog.cc: In instantiation of 'void foo() [with T = int]':
+prog.cc:28:18:   required from here
+prog.cc:8:11: warning: throw will always call terminate() [-Wterminate]
+     throw 10;
+           ^~
+calling bar()
+foo<int()
+terminate called after throwing an instance of 'int'

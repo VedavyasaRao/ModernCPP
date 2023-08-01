@@ -1,0 +1,5 @@
+vector<int> vint{20}
+vint.size()=1
+
+vector<int> vint2(20)
+vint2.size()=20

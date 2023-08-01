@@ -1,0 +1,14 @@
+build
+memberwise constructor:in 1643
+memberwise constructor:wr 1845
+
+swap - no move
+copy constructor(&):in 1643
+operator=(&):wr 1845
+operator=(&):in 1643
+
+swap - move
+operator=(&&): 1845
+copy constructor(&&): 1845
+operator=(&&):in 1643
+operator=(&&):in 1643

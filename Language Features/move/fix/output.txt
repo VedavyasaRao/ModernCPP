@@ -1,0 +1,17 @@
+pervec.push_back(Person{"in",1643});
+memberwise constructor:in 1643
+operator=(&&): 1643
+copy constructor(&&): 1643
+
+pervec.push_back(Person{"wr",1845});
+memberwise constructor:wr 1845
+operator=(&&): 1845
+copy constructor(&&): 1845
+copy constructor(&): 1643
+
+pervec.push_back(Person{"ae",1879});
+memberwise constructor:ae 1879
+operator=(&&): 1879
+copy constructor(&&): 1879
+copy constructor(&): 1643
+copy constructor(&): 1845

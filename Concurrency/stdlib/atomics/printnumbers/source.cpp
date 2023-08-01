@@ -4,15 +4,29 @@
 #include <iomanip>
 #include <exception>
 #include <stdexcept>
+#include <mutex>
 #include <chrono>
+
 
 using namespace std;
 using namespace std::chrono;
 
 #define  MAX_COUNTER 25
-#define  MAX_THREADS 1
+#define  MAX_THREADS 3
+//atomic_int counter = 1;
 int counter = 1;
+mutex iom;
 
+void printnumber(int kounter)
+{
+    lock_guard lk(iom);
+	cout << "Thread Id ";
+	cout << setw(6) << setfill(' ') << this_thread::get_id();
+	cout << ": Value = ";
+	cout << setw(2) << setfill('0') << kounter;
+	cout << endl;
+    
+}
 void ConsoleWriterFunction()
 {
 
@@ -20,11 +34,7 @@ void ConsoleWriterFunction()
 	{
 		if (counter > MAX_COUNTER)
 			break;
-		cout << "Thread Id ";
-		cout << setw(6) << setfill(' ') << this_thread::get_id();
-		cout << ": Value = ";
-		cout << setw(2) << setfill('0') << counter++;
-		cout << endl;
+        printnumber(counter++);
 		this_thread::sleep_for(chrono::milliseconds(5));
 	}
 }

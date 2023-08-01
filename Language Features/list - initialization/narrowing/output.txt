@@ -1,0 +1,7 @@
+prog.cc: In function 'int main()':
+prog.cc:3:13: error: narrowing conversion of '240' from 'int' to 'char' [-Wnarrowing]
+    3 |     char c {0xf0};
+      |             ^~~~
+prog.cc:5:13: error: narrowing conversion of '65535' from 'int' to 'short int' [-Wnarrowing]
+    5 |     short s{0xffff};
+      |             ^~~~~~

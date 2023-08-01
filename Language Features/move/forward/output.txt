@@ -1,0 +1,7 @@
+print(string& message)
+print(const string& message)
+print(string&& message)
+
+print(string& message)
+print(const string& message)
+print(string&& message)

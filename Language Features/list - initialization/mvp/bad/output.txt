@@ -1,0 +1,13 @@
+prog.cc: In function 'int main()':
+prog.cc:12:25: warning: parentheses were disambiguated as a function declaration [-Wvexing-parse]
+   12 |   TimeKeeper time_keeper(Timer ());
+      |                         ^~~~~~~~~~
+prog.cc:12:25: note: replace parentheses with braces to declare a variable
+   12 |   TimeKeeper time_keeper(Timer ());
+      |                         ^~~~~~~~~~
+      |                         -
+      |                         {        -
+      |                                  }
+prog.cc:13:22: error: request for member 'get_time' in 'time_keeper', which is of non-class type 'TimeKeeper(Timer (*)())'
+   13 |   return time_keeper.get_time();
+      |                      ^~~~~~~~

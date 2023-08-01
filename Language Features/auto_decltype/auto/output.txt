@@ -1,0 +1,29 @@
+auto demo
+//int
+auto i=0;
+sizeof(i) = 4
+
+//long
+auto l=10l;
+sizeof(l) = 8
+
+//long long
+auto ll=10ll;
+sizeof(ll) = 8
+
+//float
+auto f=5.f;
+sizeof(f) = 4
+
+//double
+auto d=5.;
+sizeof(d) = 8
+
+//vector<int>::iterator
+auto itr=vec.begin();
+(vec.front() == *itr) = true
+
+//lambda function
+auto lam = [](){cout << "hello, world!";};
+lam() = 
+hello, world!

@@ -1,0 +1,5 @@
+string name = "khrisha rao"
+name before move:khrisha rao
+string name2=move(name);
+name after move:
+name2 after move:khrisha rao

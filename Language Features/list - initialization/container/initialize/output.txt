@@ -1,0 +1,4 @@
+prog.cc: In function 'int main()':
+prog.cc:11:38: error: narrowing conversion of '2.0e+0' from 'double' to 'int' [-Wnarrowing]
+   11 |     vector<int>  intvec2 {1,2.0,3,4,5};
+      |                                      ^
