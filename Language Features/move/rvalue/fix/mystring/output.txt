@@ -1,0 +1,7 @@
+memberwise constructor:bill gates
+memberwise constructor:steve jobs
+bill gates  steve jobs
+copy constructor&&:bill gates
+operator=&&:steve jobs
+operator=&&:bill gates
+steve jobs  bill gates
