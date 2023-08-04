@@ -1,0 +1,4 @@
+validate(1,0.2,"3 4")
+validating:	1
+validating:	0.2
+validating:	3 4

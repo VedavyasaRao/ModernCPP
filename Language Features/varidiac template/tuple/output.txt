@@ -1,0 +1,6 @@
+Tuple<int, double, string> t(1, 2.0, "3,4")
+get<0>(t) = 100;
+
+get<0>(t):	100
+get<1>(t):	2
+get<2>(t):	3,4

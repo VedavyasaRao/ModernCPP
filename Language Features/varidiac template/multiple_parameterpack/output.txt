@@ -1,0 +1,9 @@
+A:(int, int, int), B:(int, int, int, int, int) 
+func<int,int,int>(1,2,3,3,5,1,2,3,4,5)
+sizeof...(arg) = 3  sz = 3
+sizeof...(arg2) = 5  sz2 = 5
+
+A: empty, B:(int, int, int, int, int) 
+func(0,5,1,2,3,4,5);
+sizeof...(arg) = 0  sz = 0
+sizeof...(arg2) = 5  sz2 = 5
