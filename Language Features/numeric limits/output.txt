@@ -1,0 +1,5 @@
+Minimum value for int: -2147483648
+Maximum value for int: 2147483647
+int is signed: true
+Non-sign bits in int: 31
+int has infinity: false

@@ -1,0 +1,30 @@
+common_type
+common_type<char, short, int>		:i
+common_type<float, double>		:d
+common_type<Derived, Base>		:Z4mainE4Base
+common_type<Derived*, Base*>		:PZ4mainE4Base
+common_type<const int, volatile int>	:i
+
+conditional
+conditional<true, int, float>		:i
+conditional<false, int, float>		:f
+
+decay
+decay<int>		:i
+decay<int&>		:i
+decay<int&&>		:i
+decay<const int&>	:i
+decay<int[2]>		:Pi
+decay<int(int)>		:PFiiE
+
+enable_if
+template <class T> 
+typename std::enable_if<std::is_integral<T>::value, bool>::type 
+is_odd(T)
+template <class T,
+class = typename std::enable_if<std::is_integral<T>::value>::type> 
+bool is_even(T)
+
+underlying_type
+underlying_type<traffic_singnal>::type	:i
+underlying_type<rainbow>::type		:s

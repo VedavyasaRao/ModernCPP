@@ -1,5 +1,7 @@
-P(int i, double j, string k)
+P p{1, 2., "3"}
+Constructor:	 P(int i, double j, string k)
 i=1 j=2 k=3
 
-P(int i, string k)
+P p2 = {4, "5"}
+Constructor:	 P(int i, string k)
 i=4 j=1.1 k=5

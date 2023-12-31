@@ -1,0 +1,14 @@
+system_clock
+Monotonic	:false
+Resolution	:ratio<1,1000000000>
+Now		:1703941400 seconds
+
+steady_clock
+Monotonic	:true
+Resolution	:ratio<1,1000000000>
+Now		:49391968 seconds
+
+high_resolution_clock
+Monotonic	:false
+Resolution	:ratio<1,1000000000>
+Now		:1703941400 seconds

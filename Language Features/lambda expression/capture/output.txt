@@ -1,0 +1,11 @@
+[&]  {std::cout << ++i << " " << ++j << " " << ++k << std::endl; }
+11 21 31
+
+[i,j, &k]  {std::cout << i << " " << j << " " << ++k << std::endl; }
+11 21 32
+
+[i,j,&k] mutable {std::cout << ++i << " " << ++j << " " << ++k << std::endl; }
+12 22 33
+
+[=]  {std::cout << i << " " << j << " " << k << std::endl; }
+11 21 33

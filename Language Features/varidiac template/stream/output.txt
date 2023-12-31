@@ -1,0 +1,5 @@
+tuple<int,float, string> t(2018,4.11, "Khri$ha")
+[2018,4.11,Khri$ha]
+
+tuple<int> t2(1975)
+[1975]

@@ -22,7 +22,7 @@ int main()
     }
     catch(...) { }
 
-    cout << "foo<int()" << endl;
+    cout << "calling foo<int()" << endl;
     try
     {
         foo<int>(); // noexcept(sizeof(T)<8) => noexcept(true), 

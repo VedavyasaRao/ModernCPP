@@ -1,0 +1,9 @@
+main thread:
+get():42
+calling async()
+use_count before reset:2
+use_count after:0
+child thread:
+get():42
+use_count:1
+deleter...

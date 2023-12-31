@@ -1,0 +1,11 @@
+system_clock::to_time_t
+Sat Dec 30 13:13:14 2023
+time(nullptr)			:1703941994
+SC::to_time_t(SC::now())	:1703941994
+
+
+system_clock::from_time_t
+mktime("09/21/18 11:48:00")			:1537530480
+duration_cast<seconds>
+(SC::from_time_t(mktime("09/21/18 11:48:00"))
+.time_since_epoch())				:1537530480

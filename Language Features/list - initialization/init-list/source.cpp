@@ -41,9 +41,11 @@ struct  P
 
 int main()
 {
+    cout << "P p{1,2,3}" << endl;
     P p{1,2,3};
     p.print();
 
+    cout << "P p2={4,5}" << endl;
     P p2={4,5};
     p2.print();
     

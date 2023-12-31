@@ -1,0 +1,17 @@
+partition ([1, 2, 3, 4, 5].begin(), [1, 2, 3, 4, 5].end(), isodd)
+Return:	[1, 5, 3, 4, 2].begin()+3
+
+stable_partition ([1, 2, 3, 4, 5].begin(), [1, 2, 3, 4, 5].end(), isodd)
+Return:	[1, 3, 5, 2, 4].begin()+3
+
+partition_copy ([1, 2, 3, 4, 5].begin(), [1, 2, 3, 4, 5].end(), [1, 3, 5].begin(), [2, 4].begin(), isodd)
+Return:	{[1, 3, 5].end(),[2, 4].end()}  
+
+partition_point ([1, 2, 3, 4].begin(), [1, 2, 3, 4].end(), isodd)
+Return:	[1, 2, 3, 4].begin()+3
+
+is_partitioned ([1, 2, 3, 4].begin(), [1, 2, 3, 4].end(), isodd)
+Return:	false
+
+is_partitioned ([1, 3, 5].begin(), [1, 3, 5].end(), isodd)
+Return:	true

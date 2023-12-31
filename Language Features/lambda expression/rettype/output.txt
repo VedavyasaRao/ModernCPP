@@ -1,0 +1,5 @@
+[] {return 1;}
+i
+
+[] -> double {return 1;}
+d

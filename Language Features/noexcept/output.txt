@@ -1,8 +1,10 @@
 prog.cc: In instantiation of 'void foo() [with T = int]':
-prog.cc:28:18:   required from here
-prog.cc:8:11: warning: throw will always call terminate() [-Wterminate]
-     throw 10;
-           ^~
+prog.cc:28:17:   required from here
+   28 |         foo<int>(); // noexcept(sizeof(T)<8) => noexcept(true),
+      |         ~~~~~~~~^~
+prog.cc:8:5: warning: 'throw' will always call 'terminate' [-Wterminate]
+    8 |     throw 10;
+      |     ^~~~~~~~
 calling bar()
-foo<int()
-terminate called after throwing an instance of 'int'
+calling foo<int()
+terminate called after throwing an instance of 'int

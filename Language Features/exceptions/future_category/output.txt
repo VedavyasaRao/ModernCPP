@@ -1,0 +1,4 @@
+Exception caught (future_error):
+Value: 1
+Category: future
+Message: Future already retrieved

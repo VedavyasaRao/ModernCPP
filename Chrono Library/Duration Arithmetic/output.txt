@@ -1,0 +1,13 @@
+ero:	duration<0, ratio<1,1>>
+min:	duration<-9223372036854775808, ratio<1,1>>
+max:	duration<9223372036854775807, ratio<1,1>>
+
+twentySeconds:	duration<20, ratio<1,1>>
+halfAMinute:	duration<0.5, ratio<60,1>>
+oneMillisecond:	duration<1, ratio<1,1000>>
+
+twentySeconds + halfAMinute + oneMillisecond:
+duration<50001, ratio<1,1000>>
+
+std::chrono::duration_cast<std::chrono::seconds>(halfAMinute):
+duration<30, ratio<1,1>>

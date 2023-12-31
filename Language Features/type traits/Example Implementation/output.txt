@@ -1,0 +1,4 @@
+s_void:
+is_void<int*>::value	:false
+is_void<void>::value	:true
+is_void<long>::value	:false

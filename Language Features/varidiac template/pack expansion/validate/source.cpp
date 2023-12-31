@@ -14,7 +14,7 @@ auto validate(Ts... ts)->initializer_list<bool>
     // “validate(ts)...” is a pack expansion
     // “validate(ts)” is its pattern
     //validate(ts)... expands to  validate(var1), validate(var2), validate(var3)
-    auto result = {validate(ts)...};
+    static auto result = {validate(ts)...};
     return result;
 }
 

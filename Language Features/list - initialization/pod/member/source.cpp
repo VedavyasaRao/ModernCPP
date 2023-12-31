@@ -18,9 +18,10 @@ struct  P
 int main()
 {
     P p{1, 2., "3"};
+    cout << R"(P p{1, 2., "3"})" << endl;
     p.print();
 
+    cout << R"(P p2 = {3, 4.})" << endl;
     P p2 = {3, 4.};
     p2.print();
-
 }

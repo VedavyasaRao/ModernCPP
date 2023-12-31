@@ -1,0 +1,71 @@
+string to_string (int val)
+to_string (100)							 = [100]
+
+
+wstring to_wstring (int val)
+to_wstring (100)						 = [100]
+
+
+string to_string (long val)
+to_string (100l)						 = [100]
+
+
+wstring to_wstring (long val)
+to_wstring (100l)						 = [100]
+
+
+string to_string (long long val)
+to_string (100ll)						 = [100]
+
+
+wstring to_wstring (long long val)
+to_wstring (100ll)						 = [100]
+
+
+string to_string (unsigned val)
+to_string (100u)						 = [100]
+
+
+wstring to_wstring (unsigned val)
+to_wstring (100u)						 = [100]
+
+
+string to_string (unsigned long val)
+to_string (100ul)						 = [100]
+
+
+wstring to_wstring (unsigned long val)
+to_wstring (100ul)						 = [100]
+
+
+string to_string (unsigned long long val)
+to_string (100ull)						 = [100]
+
+
+wstring to_wstring (unsigned long long val)
+to_wstring (100ull)						 = [100]
+
+
+string to_string (float val)
+to_string (100.2f)						 = [100.199997]
+
+
+wstring to_wstring (float val)
+to_wstring (100.2f)						 = [100.199997]
+
+
+string to_string (double val)
+to_string (100.2)						 = [100.200000]
+
+
+wstring to_wstring (double val)
+to_wstring (100.2)						 = [100.200000]
+
+
+string to_string (long double val)
+to_string (100.2l)						 = [100.200000]
+
+
+wstring to_wstring (long double val)
+to_wstring (100.2l)						 = [100.200000]
+

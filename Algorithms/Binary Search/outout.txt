@@ -1,0 +1,29 @@
+lower_bound ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 3)
+Return:	[1, 2, 3, 3, 4, 4, 5].begin()+2
+
+lower_bound ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 4, less<int>())
+Return:	[1, 2, 3, 3, 4, 4, 5].begin()+4
+
+upper_bound ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 3)
+Return:	[1, 2, 3, 3, 4, 4, 5].begin()+4
+
+upper_bound ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 4, less<int>())
+Return:	[1, 2, 3, 3, 4, 4, 5].begin()+6
+
+equal_range ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 3)
+Return:	{[1, 2, 3, 3, 4, 4, 5].begin()+2 , [1, 2, 3, 3, 4, 4, 5].begin()+4}
+
+equal_range ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 4, less<int>())
+Return:	{[1, 2, 3, 3, 4, 4, 5].begin()+4 , [1, 2, 3, 3, 4, 4, 5].begin()+6}
+
+binary_search ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 6)
+Return:	false
+
+binary_search ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 3)
+Return:	true
+
+binary_search ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 6, less<int>())
+Return:	false
+
+binary_search ([1, 2, 3, 3, 4, 4, 5].begin(), [1, 2, 3, 3, 4, 4, 5].end(), 4, less<int>())
+Return:	true

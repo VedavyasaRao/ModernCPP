@@ -1,0 +1,7 @@
+smartptr<X> a(new X)
+X() called
+(*x).a = 100
+~X() called
+x->print()
+hello, world!
+~X() called

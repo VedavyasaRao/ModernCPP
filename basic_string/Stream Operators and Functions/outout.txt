@@ -1,0 +1,14 @@
+operator<< (ostream& os, const string& str)
+operator << ([stringstream], [rao,khrisha])
+
+
+operator>> (istream& is, string& str)
+operator >> ([stringstream], [])			 = [rao,khrisha]
+
+
+getline (istream& is, string& str, char delim)
+getline ([stringstream], [], ',')			 = [rao]
+
+
+getline (istream& is, string& str)
+getline ([stringstream], [])				 = [khrisha]

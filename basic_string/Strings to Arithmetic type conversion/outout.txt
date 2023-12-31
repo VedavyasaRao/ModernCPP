@@ -1,0 +1,32 @@
+int stoi (const string&  str, size_t* idx = 0, int base = 10)
+stoi ([100])										 = 100
+stoi([100], nullptr, 16)								 = 256
+stoi([0xabcdworld!], &idx, 0)								 = 43981    idx = 6
+
+
+long stol (const string&  str, size_t* idx = 0, int base = 10)
+stol ([10l])										 = 10
+
+
+unsigned long stoul (const string&  str, size_t* idx = 0, int base = 10)
+stoul ([10ul])										 = 10
+
+
+long long stoll (const string&  str, size_t* idx = 0, int base = 10)
+stoll ([10ll])										 = 10
+
+
+unsigned long long stoull (const  str, string&  str, size_t* idx = 0, int base = 10)
+stoull ([10ull])									 = 10
+
+
+float stof (const string&  str, size_t* idx = 0)
+stof ([10.2f])										 = 10.2
+
+
+double stod (const string&  str, size_t* idx = 0)
+stod ([10.2])										 = 10.2
+
+
+long double stold (const string&  str, size_t* idx = 0)
+stold ([10.2l])										 = 10.2

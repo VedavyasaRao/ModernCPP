@@ -1,0 +1,13 @@
+main thread:
+get():42
+
+calling async() 1st time
+child thread:
+get():42
+use_count:2
+
+calling async()  2nd time
+resetting
+deleter...
+child thread:
+expired

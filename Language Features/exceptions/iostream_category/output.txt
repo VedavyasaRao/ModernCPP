@@ -1,0 +1,4 @@
+Exception caught (system_error):
+Value: 1
+Category: iostream
+Message: iostream error

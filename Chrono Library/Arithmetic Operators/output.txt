@@ -1,0 +1,18 @@
+timer started (3000 milliseconds)
+sleeping for 1 second
+iscomplete	:false
+time left on timer(ms)	:1999
+pause
+sleeping for 1 second
+resume
+sleeping for 1 second
+iscomplete	:false
+time left on timer(ms)	:998
+reset
+pause
+timer started (3000 milliseconds)
+sleeping for 2 seconds
+iscomplete	:false
+time left on timer(ms)	:999
+sleeping for 2 seconds
+iscomplete	:true

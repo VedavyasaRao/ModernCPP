@@ -1,0 +1,26 @@
+accumulate ([10,20,30].begin(), [10,20,30].end(), 100)
+Return:	160
+
+accumulate ([10,20,30].begin(), [10,20,30].end(), 100,  multiplies<int>())
+Return:	600000
+
+partial_sum ([10,20,30].begin(), [10,20,30].end(), [0,0,0].begin())
+Return:	[10, 30, 60].end()
+
+partial_sum ([10,20,30].begin(), [10,20,30].end(), [0,0,0].begin(), multiplies<int>())
+Return:	[10, 200, 6000].end()
+
+inner_product ([10,20,30].begin(), [10,20,30].end(), [10,20,30].begin(), 100)
+Return:	1500
+
+inner_product ([10,20,30].begin(), [10,20,30].end(), [10,20,30].begin(), 100, minus<int>(), multiplies<int>())
+Return:	-1300
+
+iota ([10,20,30].begin(), [10,20,30].end(), 100)
+Return:	[100, 101, 102]
+
+adjacent_difference ([10,20,30].begin(), [10,20,30].end(), [0,0,0].begin())
+Return:	[10, 10, 10].end()
+
+adjacent_difference ([10,20,30].begin(), [10,20,30].end(), [0,0,0].begin(), multiplies<int>())
+Return:	[10, 200, 600].end()

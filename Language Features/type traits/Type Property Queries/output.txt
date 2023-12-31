@@ -1,0 +1,17 @@
+rank:
+rank<int>::value		:0
+rank<int[]>::value		:1
+rank<int[][10]>::value		:2
+rank<int[10][10]>::value	:2
+
+alignment_of:
+alignment_of<char>::value		:1
+alignment_of<int>::value 		:4
+alignment_of<int[20]>::value		:4
+alignment_of<long long int>::value	:8
+
+extent:
+extent<int[][24][60], 0>::value	:0
+extent<int[][24][60], 1>::value	:24
+extent<int[][24][60], 2>::value	:60
+extent<int[][24][60], 3>::value	:0

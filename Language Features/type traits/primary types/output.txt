@@ -1,0 +1,15 @@
+is_void
+is_void<void *>::value	:false
+is_void<void>::value	:true
+
+is_null_pointer
+is_null_pointer<int *>::value		:false
+is_null_pointer<nullptr_t>::value	:false
+
+is_integral
+is_integral<int>::value		:true
+is_integral<char*>::value	:false
+
+is_floating_point
+is_floating_point<char*>	:false
+is_floating_point<float>	:true

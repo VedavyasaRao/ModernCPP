@@ -1,0 +1,16 @@
+STL alogorithms
+vector<int> c{1, 2, 3, 4, 5, 6, 7};
+remove_if
+for_each
+5 6 7 
+
+function objects
+func1: 10
+func2: 10
+
+Emulate `recursive lambda` calls:
+Fibonacci numbers: 
+0 1 1 2 3 5 8 13 
+
+Launching thread
+hello, world!

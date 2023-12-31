@@ -1,0 +1,13 @@
+add_pointer
+add_pointer<int>::type		:Pi
+add_pointer<const int>::type	:PKi
+add_pointer<int&>::type		:Pi
+add_pointer<int*>::type		:PPi
+add_pointer<int(int)>::type	:PFiiE
+
+remove_pointer
+remove_pointer<int>::type		:i
+remove_pointer<int*>::type		:i
+remove_pointer<int**>::type		:Pi
+remove_pointer<const int*>::type	:i
+remove_pointer<int* const>::type	:i
