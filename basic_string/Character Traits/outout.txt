@@ -1,9 +1,0 @@
-char foo[] = "---o............";
-char_traits<char>::move (foo+3,foo,4);
-char_traits<char>::move (foo+6,foo,7);
----o............
-------o.........
-------------o...
-
-insensitive_string foo{"Test"},bar{"test"};
-(foo==bar):	true
