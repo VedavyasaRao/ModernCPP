@@ -1,0 +1,11 @@
+Pattern:(a)(b)(c)\k-3
+Input:abca
+match? true
+
+Pattern:(a)(b)(c)\k-1
+Input:abcc
+match? true
+
+Pattern:(a)(b)(c\k-2)
+Input:abcb
+match? true
