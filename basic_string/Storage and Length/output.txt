@@ -1,0 +1,43 @@
+c_str()
+[khrisha rao].c_str()			 = [k,h,r,i,s,h,a, ,r,a,o,\0]
+
+data()
+[khrisha rao].data()			 = [k,h,r,i,s,h,a, ,r,a,o]
+
+size()
+[khrisha rao].size()			 = 11
+
+length()
+[khrisha rao].length()			 = 11
+
+max_size()
+[].max_size()				 = 9223372036854775807
+
+resize(size_t n)
+[khrisha rao].resize(7)			 = khrisha
+
+resize(size_t n, char c)
+[].resize(20,'k')			 = kkkkkkkkkkkkkkkkkkkk
+
+capacity()
+[kkkkkkkkkkkkkkkkkkkk].capacity()	 = 30
+
+reserve()
+[].reserve()
+[].capacity()				 = 15
+
+reserve(size_t n)
+[].reserve(1000)
+[].capacity()				 = 1000
+
+clear()
+[khrisha rao].clear()
+[].empty()				 = true
+
+empty()
+[khrisha rao].empty()			 = false
+
+shrink_to_fit()
+[khrisha rao].capacity()		 = 1000
+[khrisha rao].shrink_to_fit()
+[khrisha rao].capacity()		 = 15

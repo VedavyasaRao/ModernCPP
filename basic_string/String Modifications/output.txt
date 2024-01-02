@@ -1,0 +1,142 @@
+append(const string& s)
+[khrisha].append([ rao])						 = [khrisha rao]
+
+append(const string& s, size_t p, size_t n)
+[khrisha].append([ rao],0,string::npos)					 = [khrisha rao]
+
+append(const char* s)
+[khrisha].append(" rao")						 = [khrisha rao]
+
+append(const  char* s, size_t n)
+[khrisha].append(" rao",4)						 = [khrisha rao]
+
+append(size_t n, char c)
+[khrisha].append(4,'a')							 = [khrishaaaaa]
+
+append(InputIterator b, InputIterator e)
+[khrisha].append([ rao].begin(),[ rao].end())				 = [khrisha rao]
+
+append(initializer_list<char> il)
+[khrisha].append({' ','r','a','o'})					 = [khrisha rao]
+
+assign(const string& s)
+[].assign([khrisha rao])						 = [khrisha rao]
+
+assign(const string& s, size_t p, size_t n)
+[].assign([khrisha rao],0,string::npos)					 = [khrisha rao]
+
+assign(const char* s)
+[].assign("khrisha rao")						 = [khrisha rao]
+
+assign(const char* s)
+[].assign("khrisha rao")						 = [khrisha rao]
+
+assign(const char* s, size_t n)
+[].assign("khrisha rao", 11)						 = [khrisha rao]
+
+assign(size_t n, char c)
+[].assign(7,'k')							 = [kkkkkkk]
+
+assign(InputIterator b, InputIterator e)
+[].assign([khrisha rao].begin(),[khrisha rao].end())			 = [khrisha rao]
+
+assign(initializer_list<char> il)
+[].assign({'k','h','r','i','s','h','a',' ','r','a','o'}			 = [khrisha rao]
+
+assign (string&& s)
+[].assign(move([khrisha rao])						 = [khrisha rao]
+
+insert (size_t p, const string& s)
+[].insert(0,[khrisha rao])						 = [khrisha rao]
+
+insert (size_t p, const string& s, size_t sp, size_t n)
+[].insert(0,[khrisha rao],0,11)						 = [khrisha rao]
+
+insert (size_t p, const char* s)
+[].insert(0,"khrisha rao")						 = [khrisha rao]
+
+insert (size_t p, const char* s, size_t n)
+[].insert(0,"khrisha rao", 11)						 = [khrisha rao]
+
+insert (size_t p, const char* s, size_t n)
+[].insert(0,"khrisha rao", 11)						 = [khrisha rao]
+
+insert (size_t p, size_t n, char c)
+[].insert(0, 7,'k')							 = [kkkkkkk]
+
+insert (const_iterator p, size_t n, char c)
+[].insert([].begin(), 7,'k')						 = [kkkkkkk].begin()+0
+
+insert (const_iterator p, char c)
+[].insert([].begin(), 'k')						 = [k].begin()+0
+
+insert (iterator p, InputIterator b, InputIterator e)
+[].insert([].begin(), 
+[khrisha rao].begin(), [khrisha rao].end())				 = [khrisha rao].begin()+0
+
+insert(iterator p, initializer_list<char> il)
+[].insert([].begin(),
+{'k','h','r','i','s','h','a',' ','r','a','o'}				 = [khrisha rao].begin()+0
+
+erase ()
+[khrisha rao].erase()							 = []
+
+erase (size_t p, size_t n)
+[khrisha rao].erase(0, 11)						 = [khrisha]
+
+erase (const_iterator p)
+[khrisha rao].erase([khrisha rao].begin()+7)				 = [khrisharao].begin()+7
+
+erase (const_iterator b, const_iterator e)
+[khrisha rao].erase(
+[khrisha rao].begin()+7, [khrisha rao].end())				 = [khrisha].end()
+
+replace (size_t p, size_t n, const string& s)
+[khrishaxxxx].replace(7, 4, [ rao])					 = khrisha rao
+
+replace (citerator i1, citerator i2, const string& s)
+[khrishaxxxx].replace(
+[khrishaxxxx].begin()+7, [khrishaxxxx].end(), [ rao])			 = khrisha rao
+
+replace (size_t p, size_t n, const string& s, size_t sp, size_t sn)
+[khrishaxxxx].replace(7, 4, [ rao], 0, 4)				 = khrisha rao
+
+replace (size_t p, size_t n, const char* s)
+[khrishaxxxx].replace(7, 4, " rao", 0, 4)				 = khrisha rao
+
+replace (citerator i1, citerator i2, const char* s)
+[khrishaxxxx].replace(
+[khrishaxxxx].begin()+7, [khrishaxxxx].end(), " rao")			 = khrisha rao
+
+replace (size_t p, size_t n, const char* s, size_t sn)
+[khrishaxxxx].replace(7, 4, " rao", 4)					 = khrisha rao
+
+replace (size_t p, size_t n, const char* s, size_t sn)
+[khrishaxxxx].replace(7, 4, " rao", 4)					 = khrisha rao
+
+replace (citerator i1, citerator i2, const char* s, size_t n)
+[khrishaxxxx].replace(
+[khrishaxxxx].begin()+7, [khrishaxxxx].end(), " rao", 4)		 = khrisha rao
+
+replace (size_t  pos, size_t len, size_t n, char c)
+[khrishaxxxx].replace(6, 5, 6, 'a')					 = khrishaaaaaa
+
+replace (citerator i1, citerator i2, size_t n, char c)
+[khrishaxxxx].replace(
+[khrishaxxxx].begin()+7, [khrishaxxxx].end(), 6,'a')			 = khrishaaaaaaa
+
+replace (citerator i1, citerator i2, InputIterator  b, InputIterator e)
+[khrishaxxxx].replace([khrishaxxxx].begin()+7, [khrishaxxxx].end(), 
+[ rao].begin(), [ rao].end())						 = khrisha rao
+
+replace (citerator i1, citerator i2, initializer_list<char> il)
+[khrishaxxxx].replace([khrishaxxxx].begin()+7, [khrishaxxxx].end(), 
+{' ','r','a','o'})							 = khrisha rao
+
+pop_back()
+[ಖ್ರಿಷಾ Rao!].pop_back()
+result:									 = ಖ್ರಿಷಾ Rao
+
+push_back(char c)
+[ಖ್ರಿಷಾ Rao].push_back('👸')
+result:									 = ಖ್ರಿಷಾ Rao👸
