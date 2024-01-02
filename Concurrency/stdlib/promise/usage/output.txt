@@ -1,0 +1,2 @@
+doubler(10)=		20
+exception caught:	no negative number
