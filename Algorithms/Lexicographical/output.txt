@@ -1,0 +1,119 @@
+lexicographical_compare("ab".begin(), "ab".end(),"abcd".begin(), "abcd".end())
+Return:	true
+
+lexicographical_compare("abcD".begin(), "abcD".end(),"abcd".begin(), "abcd".end())
+Return:	true
+
+lexicographical_compare("abc4".begin(), "abc4".end(),"abcD".begin(), "abcD".end())
+Return:	true
+
+lexicographical_compare("abcD".begin(), "abcD".end(),"abCd".begin(), "abCd".end())
+Return:	false
+
+lexicographical_compare("ab".begin(), "ab".end(),"abcd".begin(), "abcd".end(), caseless)
+Return:	true
+
+lexicographical_compare("abcD".begin(), "abcD".end(),"abcd".begin(), "abcd".end(), caseless)
+Return:	false
+
+lexicographical_compare("abc4".begin(), "abc4".end(),"abcD".begin(), "abcD".end(), caseless)
+Return:	true
+
+lexicographical_compare("abcD".begin(), "abcD".end(),"abCd".begin(), "abCd".end(), caseless)
+Return:	false
+
+next_permutation("abc".begin(), "abc".end())
+Return:	true
+output:	acb
+
+next_permutation("acb".begin(), "acb".end())
+Return:	true
+output:	bac
+
+next_permutation("bac".begin(), "bac".end())
+Return:	true
+output:	bca
+
+next_permutation("bca".begin(), "bca".end())
+Return:	true
+output:	cab
+
+next_permutation("cab".begin(), "cab".end())
+Return:	true
+output:	cba
+
+next_permutation("cba".begin(), "cba".end())
+Return:	false
+output:	abc
+
+next_permutation("abc".begin(), "abc".end(), less<int>())
+Return:	true
+output:	acb
+
+next_permutation("acb".begin(), "acb".end(), less<int>())
+Return:	true
+output:	bac
+
+next_permutation("bac".begin(), "bac".end(), less<int>())
+Return:	true
+output:	bca
+
+next_permutation("bca".begin(), "bca".end(), less<int>())
+Return:	true
+output:	cab
+
+next_permutation("cab".begin(), "cab".end(), less<int>())
+Return:	true
+output:	cba
+
+next_permutation("cba".begin(), "cba".end(), less<int>())
+Return:	false
+output:	abc
+
+prev_permutation("cba".begin(), "cba".end())
+Return:	true
+output:	cab
+
+prev_permutation("cab".begin(), "cab".end())
+Return:	true
+output:	bca
+
+prev_permutation("bca".begin(), "bca".end())
+Return:	true
+output:	bac
+
+prev_permutation("bac".begin(), "bac".end())
+Return:	true
+output:	acb
+
+prev_permutation("acb".begin(), "acb".end())
+Return:	true
+output:	abc
+
+prev_permutation("abc".begin(), "abc".end())
+Return:	false
+output:	cba
+
+prev_permutation("cba".begin(), "cba".end(), less<int>())
+Return:	true
+output:	cab
+
+prev_permutation("cab".begin(), "cab".end(), less<int>())
+Return:	true
+output:	bca
+
+prev_permutation("bca".begin(), "bca".end(), less<int>())
+Return:	true
+output:	bac
+
+prev_permutation("bac".begin(), "bac".end(), less<int>())
+Return:	true
+output:	acb
+
+prev_permutation("acb".begin(), "acb".end(), less<int>())
+Return:	true
+output:	abc
+
+prev_permutation("abc".begin(), "abc".end(), less<int>())
+Return:	false
+output:	cba
