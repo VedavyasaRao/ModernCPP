@@ -1,0 +1,2 @@
+unexpected handler called
+caught bad_exception

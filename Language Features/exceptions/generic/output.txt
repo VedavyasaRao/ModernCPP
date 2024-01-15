@@ -1,1 +1,4 @@
+int thrown: 10
+string thrown: test
+float thrown: 2
 something else thrown
