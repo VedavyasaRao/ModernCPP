@@ -1,0 +1,15 @@
+Detaching a not-a-thread...
+Error detaching empty thread:
+  "Invalid argument" (std::errc::invalid_argument)
+
+Opening nonexistent file...
+Error opening nonexistent file for reading:
+  "No such file or directory" (std::errc::no_such_file_or_directory)
+
+Reading from directory as a file...
+Error reading data from directory:
+  "Is a directory" (std::errc::is_a_directory)
+
+Open read-only file for writing...
+Error opening read-only file for writing:
+  "Permission denied" (std::errc::permission_denied)
