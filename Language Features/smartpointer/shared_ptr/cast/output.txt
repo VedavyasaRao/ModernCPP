@@ -1,0 +1,15 @@
+sp = make_shared<derived>()
+type of *sp	= 7derived
+
+sp2 = static_pointer_cast<base>(sp)
+type of *sp2	= 7derived
+sp.use_count()	= 2
+
+sp3 = dynamic_pointer_cast<derived>(sp2)
+type of *sp3	= 7derived
+sp.use_count()	= 3
+
+sp4 = make_shared<int>(10)
+sp5 = const_pointer_cast<const int>(sp4)
+*sp5	= 10
+sp4.use_count()	= 2

@@ -1,0 +1,11 @@
+auto sp1 = make_shared<C>(1)
+sp1		= C{ i:1, f:0 }
+
+shared_ptr<C> sp2 = make_shared<C>(2, 3.0f)
+sp2		= C{ i:2, f:3 }
+
+auto sp3 = make_shared<int>(20)
+*sp3		= 20
+
+auto sp4 = make_shared<vector<int>>(30)
+sp4->size()	 = 30

@@ -1,0 +1,40 @@
+1) Unique ownership semantics demo
+D::D
+D::bar
+D::~D
+
+2) Runtime polymorphism demo
+D::D
+D::bar
+D::~D
+
+3) Custom deleter demo
+x
+
+4) Custom lambda-expression deleter and exception safety demo
+D::D
+destroying from a custom deleter...
+D::~D
+Caught exception
+
+5) Array form of shared_ptr demo
+D::D
+D::D
+D::D
+D::~D
+D::~D
+D::~D
+
+6) get demo
+
+7) reset demo
+
+8) unique demo
+unique		: true
+use_count	: 1
+
+9) operator bool demo
+foo		: true
+
+10) operator [] demo
+foo2[2]		: 0

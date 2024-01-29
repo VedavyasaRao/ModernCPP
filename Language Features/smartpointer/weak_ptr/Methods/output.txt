@@ -1,0 +1,22 @@
+Before assignment
+use_count 	= 0
+expired() 	= true
+
+After assignment
+use_count 	= 1
+expired() 	= false
+
+After lock
+*sp 		= 20
+use_count 	= 2
+expired() 	= false
+
+After reset
+use_count 	= 0
+expired() 	= true
+
+owner_before() demo
+*x			= 20
+*w2.lock()		= 10
+x < y			= true
+w2.owner_before(x)	= false

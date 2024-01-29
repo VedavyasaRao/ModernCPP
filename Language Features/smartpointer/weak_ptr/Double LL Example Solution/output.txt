@@ -1,0 +1,14 @@
+adding...
+adding	10
+adding	20
+adding	30
+
+printing...
+10	use_count:	1
+20	use_count:	1
+30	use_count:	2
+
+cleanup...
+deleting	10
+deleting	20
+deleting	30

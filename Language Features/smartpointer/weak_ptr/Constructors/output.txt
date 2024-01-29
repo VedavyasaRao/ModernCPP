@@ -1,0 +1,6 @@
+weak_ptr<T>()
+weak_ptr(weak_ptr&& x)
+weak_ptr<T>(weak_ptr<T>&& x)
+weak_ptr(const weak_ptr& x)
+weak_ptr<T>(const weak_ptr<T>& x)
+weak_ptr<T>(const shared_ptr<T>& x)

@@ -1,0 +1,11 @@
+main thread:
+starting offer manager
+offer		:sfo-blr	100 usd
+validity	:8 seconds
+
+calling fulfill 1st time
+fulfill thread:	offer fulfilled
+
+calling fulfill  2nd time
+offermanager thread:	offer expired
+fulfill thread:	offer expired
