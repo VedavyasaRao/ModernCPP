@@ -1,0 +1,14 @@
+adding...
+adding	10
+adding	20
+adding	30
+
+printing...
+10
+20
+30
+
+cleanup...
+deleting	10
+deleting	20
+deleting	30
