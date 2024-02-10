@@ -1,0 +1,13 @@
+	smartprint(cout, 
+        "Citizen\t\t\t:", make_pair(true, "boolalpha"), 
+        "\nheight(meters)\t\t:", make_pair(h, "fixed,setprecision(3)"),
+        "\nincome\t\t\t:", make_pair(put_money(m),  "showbase"),
+        "\nSocial Security number\t:", make_pair(ssn, "left,setw(8),setfill('#'),showbase"),
+        "\ntime stamp\t\t:", put_time(&tm, "%c %Z"),
+        "\n")
+
+Citizen			:true
+height(meters)		:1.568
+income			:$1,234.56
+Social Security number	:123#####
+time stamp		:Fri 09 Feb 2024 06:13:56 PM UTC UTC
