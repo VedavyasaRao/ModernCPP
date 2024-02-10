@@ -9,42 +9,63 @@ using namespace std;
 
 struct mystring:std::string
 {
-    mystring()
+    //defined in basic_string class; contains underlying chars
+    //char *buffer; 
+
+    mystring() noexcept
     {
         cout << "default constructor" << endl;
     }
 
-    mystring(const char* s):std::string(s)
+    mystring(const char* s) noexcept
+    :std::string(s) 
     {
-        cout << "memberwise constructor:" << s << endl;
+        cout << "memberwise constructor\t: " << s << endl;
     }
 
 
-    mystring(const mystring& s) :std::string(s)
+    mystring(const mystring& s) noexcept :std::string(s) 
     {
-        cout << "copy constructor:" << s << endl;
+        cout << "copy constructor\t: " << s << endl;
     }
 
-    mystring& operator=(const mystring& s)
+    mystring& operator=(const mystring& s) noexcept
     {
-        cout << "operator=:" << s  << endl;
+        cout << "operator=\t\t: " << s  << endl;
         dynamic_cast<string*>(this)->operator=(s);
         return *this;
     }
 
-};
+/*
+    mystring(mystring&& s)  noexcept :std::string(s) 
+    {
+        cout << "copy constructor&&:" << s << endl;
+    }
 
-void exchange(mystring &p, mystring &p2)
-{
-    mystring t = p;
-    p = p2;
-    p2 = t;
-}
+    mystring& operator=(mystring&& s) noexcept
+    {
+        cout << "operator=&&:" << s  << endl;
+        dynamic_cast<string*>(this)->operator=(s);
+        return *this;
+    }
+*/
+};
 
 int main()
 {
-    mystring p{"bill gates"}, p2{"steve jobs"};
-    cout << p << "  " << p2 << endl;
-    exchange(p,p2);
-    cout << p << "  " << p2 << endl;
+    //swap
+    cout << "swap" << endl;
+    mystring g{"Guarantee"}, w{"Warranty"};
+    mystring t = g;
+    g = w;
+    w = t;
+    cout << endl << endl;
+    
+    cout << "vector insert" << endl;
+    vector<mystring> test;
+    for (auto i=0; i<5; ++i)
+    {
+        string t = "instance"+to_string(i);
+        test.emplace_back(mystring(t.c_str()));
+    }
 }

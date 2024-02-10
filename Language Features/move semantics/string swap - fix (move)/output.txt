@@ -1,7 +1,26 @@
-memberwise constructor:bill gates
-memberwise constructor:steve jobs
-bill gates  steve jobs
-copy constructor&&:bill gates
-operator=&&:steve jobs
-operator=&&:bill gates
-steve jobs  bill gates
+swap
+memberwise constructor	: Guarantee
+memberwise constructor	: Warranty
+copy constructor&&	: Guarantee
+operator=&&		: Warranty
+operator=&&		: Guarantee
+
+
+vector insert
+memberwise constructor	: instance0
+copy constructor&&	: instance0
+memberwise constructor	: instance1
+copy constructor&&	: instance1
+copy constructor&&	: instance0
+memberwise constructor	: instance2
+copy constructor&&	: instance2
+copy constructor&&	: instance0
+copy constructor&&	: instance1
+memberwise constructor	: instance3
+copy constructor&&	: instance3
+memberwise constructor	: instance4
+copy constructor&&	: instance4
+copy constructor&&	: instance0
+copy constructor&&	: instance1
+copy constructor&&	: instance2
+copy constructor&&	: instance3
