@@ -1,12 +1,91 @@
-# ModernCPP #
+# Modern C++ #
 
-*Modern C++ Topics*
+## Language Features ##
 
-## Regular Expression : Quick Tour. ##
+### auto
+ 
+### char16 and char32
+ 
+### constexpr
+ 
+### decltype
+ 
+### declval
+ 
+### lambda expression
+ 
+### list initialization
+ 
+### long long
+ 
+### move semantics
+ 
+### noexcept
+ 
+### nullptr
+ 
+### numeric limits
+ 
+### perfect forwarding
+ 
+### range for loop
+ 
+### raw string
+ 
+### rvalue reference
+ 
+### string literals
+ 
+### type traits
+ 
+### variadic template
 
-Regular expressions are indispensable when looking for a specific information.
-When used in programming languages, it's highly versatile to filter out information or 
-validating inputs without needing to write lots of code. 
-Read more about it [here](https://techlog-vedavyasarao.blogspot.com/2023/03/regular-expression-quick-tour.html)
+## Library Features ##
+
+### chrono library
+
+### concurrency
+ 
+### exceptions
+ 
+### io stream
+ 
+### localization
+ 
+### ratio library
+ 
+### regular expressions
+ 
+### smart pointer
+ 
+### numeric limits
+ 
+### type traits
+ 
+### basic_string
+
+## Algorithms
+
+### Partitions
+
+### Binary Search
+
+### Min/Max
+
+### Numerical
+
+### Lexicographical
+
+### Heap
+
+### Merge
+
+### Sort
+
+### Modifying
+
+### Non modifying
+
+
 
 
