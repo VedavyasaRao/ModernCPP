@@ -18,7 +18,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/decl
 It's a template function for type T.It returns an rvalue reference to type T without referring to any object, making it possible to use member functions in the operand of the decltype specifier without the need to go through constructors. T may be an incomplete type.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/declval).
 ### lambda expression
-Lambdas are basically anonymous function objects generated right at the location where it's invoked or passed as an argument to a function. Lambdas are game changer since they seamlessly integrate into stl algorithms, concurrency objects and more.  
+Lambdas are basically anonymous function objects generated right at the location where it's invoked or passed as an argument to a function. Lambdas are game changer since they seamlessly integrate into std lib algorithms, concurrency objects and more.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/lambda%20expression).
 ### list initialization
 list initialization enables uniform way of initializing arithmetic types such as int, double etc or structs, classes using a pair of braces {}.  
@@ -39,7 +39,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/null
 The rvalue semantics enable passing the arguments without ambiguity  to the handler function in the factory method.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/perfect%20forwarding).
 ### range for loop
-*for* loops are versatile can be used in various scenarios. *range based for* loop are designed to work with containers so that it can directly access the elements of an array or a collection for a given range, either by value or a by reference.  
+*for* loops are versatile can be used in various scenarios. *range based for* loop are designed to work with containers so that the elements of an array or a collection for a given range, can be iterated directly either by value or a by reference.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/range%20for%20loop).
 ### raw string
 Assigning a free flowing text to a string variable has been a challenge especially if it contains " character embedded in it. Escaping special characters  and adding newline characters can be tedious and reduces readability of the text.The raw string feature enables declaring strings containing special characters such as newline, tab etc as is without escaping.  
