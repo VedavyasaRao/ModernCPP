@@ -42,7 +42,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/perf
 *for* loops are versatile can be used in various scenarios. *range based for* loop are designed to work with containers so that their elements for a given range can be iterated directly either by value or a by reference.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/range%20for%20loop).
 ### raw string
-Assigning a free flowing text to a string variable has been a challenge especially if it contains " character embedded in it. Escaping special characters  and adding newline characters can be tedious and reduces readability of the text.The raw string feature enables declaring strings containing special characters such as newline, tab etc as is without escaping.  
+Assigning a free flowing text to a string variable has been a challenge especially if it contains *"* character embedded in it. Escaping special characters  and adding newline characters can be tedious and reduces readability of the text.The raw string feature enables declaring strings containing special characters such as newline, tab etc as is without escaping.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/raw%20string).
 ### rvalue reference
 When using containers such as lists, vectors, maps, a lot of temporary objects are created and destroyed during the life time of an application. 
@@ -71,15 +71,15 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/chro
 C++11 introduces a new memory model and the concurrency library to support multi threaded peogramming.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/concurrency).
 ### exceptions
-In C++ 11, a new family of classes were introduced to handle exceptions with exception class as its root.  
-The derived classes overrides what() to return error string. In addition, newer classes such as error_code and error_condition  were added to return additional error information.  
+In C++ 11, a new family of classes were introduced to handle exceptions with *exception* class as its root.  
+The derived classes overrides *what()* to return error string. In addition, newer classes such as *error_code* and *error_condition*  were added to return additional error information.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/exceptions).
 ### io stream
 The IOStreams provides classes to perform IO for console, disk and memory as an alternative to CRT functions. In C++11, new classes were introduced to handle currency and time.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/io%20stream).
 ### localization
 Each country has one or more native speaking languages and writing systems or a scripts, numbering symbols, number grouping symbol, decimal point symbol, currency symbols, date format etc. 
-The locale and facets classes provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
+The *locale* and *facet* classes provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/localization).
 ### numeric limits
 numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros such as INT_MAX.  
