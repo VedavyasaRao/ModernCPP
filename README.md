@@ -35,9 +35,6 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/noex
 ### nullptr
 NULL is defined as macro, represented as an integer with the value of 0. However it's misused to represent null pointers. nullptr_t data type is introduced specifically to prevent misuse of NULL in place of null pointers. nullptr is the only instance of this type and can be used in place of a null pointer.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/nullptr).
-### numeric limits
-numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros.  
-More details can be found [here](https://modcpp11.blogspot.com/search/label/numeric%20limits).
 ### perfect forwarding
 The rvalue semantics enable passing the arguments without ambiguity  to the handler function in the factory method.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/perfect%20forwarding).
@@ -65,27 +62,43 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/vari
 ## Library Features ##
 
 ### basic_string
-
+CRT provides plethora of functions to handle strings. There are different functions for getting length, append, copy etc. 
+std::basic_string class attempts to objectify strings so that it's easier to use.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/basic_string).
 ### chrono library
-
+Chrono library defines a set of Clocks and classes such as Duration and Time Point. These are used in functions such as sleep_for(duration) and sleep_until(time_point) APIs of synchronization classes to relinquish processing within a thread.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/chrono%20library).
 ### concurrency
- 
+C++11 introduces a new memory model and the concurrency library to support multi threaded peogramming.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/concurrency).
 ### exceptions
- 
+In C++ 11, a new family of classes were introduced to handle exceptions with exception class as its root.  
+The derived classes overrides what() to return error string. In addition, exceptions future_error and system_error return additional error information in error_code.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/exceptions).
 ### io stream
- 
+The IOStreams provides C++ classes for console, disk and memory IO as an alternative to CRT functions. In C++11, new classes were introduced to handle currency and time.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/io%20stream).
 ### localization
-
+The world is a diverse place with many countries. Each country having one or more native speaking languages and writing systems or a scripts, numbering symbols,  number grouping symbol, decimal point symbol, currency symbols etc. 
+On computers, operating systems provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/localization).
 ### numeric limits
- 
+numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/numeric%20limits).
 ### ratio library
- 
+standard library defines a new template class ratio to define ratios that can be used only during compile time.ratio is used in chrono library to represent different time units such as millisecond, hour etc.  
+More details can be found [here](https://modcpp11.blogspot.com/search/label/ratio%20library).
 ### regular expressions
- 
+Regular expressions are indispensable when looking for a specific information.
+When used in programming languages, it's highly versatile to filter out information or 
+validating inputs without needing to write lots of code. 
+Read more about it [here](https://modcpp11.blogspot.com/search/label/regular%20expression)
 ### smart pointer
- 
+Internally C/C+++ runtime does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. When the smartpointer object is destroyed, the underlying memory of the pointer is released. 
+Read more about it [here](https://modcpp11.blogspot.com/search/label/smart%20pointer)
 ### type traits
-
+ype_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time. 
+Read more about it [here](https://modcpp11.blogspot.com/search/label/type%20traits)
 ## Algorithms
 
 ### Binary Search
