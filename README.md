@@ -97,7 +97,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/regu
 Internally C/C+++ runtime does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. When the smartpointer object is destroyed, the underlying memory of the pointer is released.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/smart%20pointer)
 ### type traits
-ype_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time.  
+type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/type%20traits)
 ## Algorithms
 
