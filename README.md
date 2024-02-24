@@ -102,21 +102,33 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/type
 ## Algorithms
 
 ### Binary Search
-
+Binary search algorithms  operate on various types of containers such as sequence, associative and unordered that are sorted to perform actions such as finding upper, lower, equal bounds for a value or its existence.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-binary-search.html)
 ### Heap
-
+Heap Algorithms  operate on various types of containers such as sequence, associative and unordered to organize the elements of a range that allows for fast retrieval of the element with the highest 
+value at any moment (with pop_heap), even repeatedly, while allowing for fast insertion of new elements  (with push_heap).  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-binary-search.html)
 ### Lexicographical
-
+Lexicographical algorithms  operate on various types of containers such as sequence, associative and unordered to perform lexicographical actions such as comparing elements, generate sequences etc.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-numerics.html)
 ### Merge
-
+Merge algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as merging sorted sequences, set union, intersection and differences.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-search-and-merge.html)
 ### Min/Max
-
+Min/Max Algorithms  are template based functions that operate on various types of containers such as sequence, associative and unordered to perform actions such as finding the smallest and the largest element.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-minmax.html)
 ### Modifying
-
+Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as  replace, remove, copy etc.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/11/algorithms-modifying.html)
 ### Non modifying
-
+Non Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as search, find, count etc.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/11/algorithmsnon-modifying.html)
 ### Numerical
-
+Numerical algorithms  operate on various types of containers such as sequence, associative and unordered to perform operations on the elements of a range to return a value or a sequence.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-numerical.html)
 ### Partitions
-
+Partitions are commonly used for searching and sorting. Partitioning algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as partition, sort and more.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-partitions_18.html)
 ### Sort
+Sorting Algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as sorting.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/12/algorithms-partitions.html)
