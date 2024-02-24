@@ -4,7 +4,7 @@
 
 $${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
 
-$${\color{red} ### auto }$$
+### $${\color{red} auto }$$
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value. 
 
 ### char16 and char32
