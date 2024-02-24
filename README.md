@@ -64,6 +64,8 @@ To accomplish this, a new kind of parameter called parameter pack is introduced 
 More details can be found [here](https://modcpp11.blogspot.com/search/label/variadic%20template).
 ## Library Features ##
 
+### basic_string
+
 ### chrono library
 
 ### concurrency
@@ -73,6 +75,8 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/vari
 ### io stream
  
 ### localization
+
+### numeric limits
  
 ### ratio library
  
@@ -80,34 +84,27 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/vari
  
 ### smart pointer
  
-### numeric limits
- 
 ### type traits
- 
-### basic_string
 
 ## Algorithms
 
-### Partitions
-
 ### Binary Search
 
-### Min/Max
-
-### Numerical
-
-### Lexicographical
 
 ### Heap
 
+### Lexicographical
+
 ### Merge
 
-### Sort
+### Min/Max
 
 ### Modifying
 
 ### Non modifying
 
+### Numerical
 
+### Partitions
 
-
+### Sort
