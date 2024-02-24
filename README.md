@@ -2,11 +2,8 @@
 *Discusses some of the new features of C++ 11 and existing too*
 ## Language Features ##
 
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
-### $${\color{red} auto }$$
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value. 
-
 ### char16 and char32
 char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits across all the platforms.
 Similarly, the size of char32_t data type is fixed at 32 bits across all the platforms. 
