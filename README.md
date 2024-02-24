@@ -39,7 +39,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/null
 The rvalue semantics enable passing the arguments without ambiguity  to the handler function in the factory method.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/perfect%20forwarding).
 ### range for loop
-*for* loops are versatile can be used in various scenarios. *range based for* loop are designed to work with containers so that its elements for a given range, can be iterated directly either by value or a by reference.  
+*for* loops are versatile can be used in various scenarios. *range based for* loop are designed to work with containers so that their elements for a given range can be iterated directly either by value or a by reference.  
 More details can be found [here](https://modcpp11.blogspot.com/search/label/range%20for%20loop).
 ### raw string
 Assigning a free flowing text to a string variable has been a challenge especially if it contains " character embedded in it. Escaping special characters  and adding newline characters can be tedious and reduces readability of the text.The raw string feature enables declaring strings containing special characters such as newline, tab etc as is without escaping.  
