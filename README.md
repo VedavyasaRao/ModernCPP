@@ -6,12 +6,10 @@
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value. 
 More details can be found [here](https://modcpp11.blogspot.com/search/label/declval).
 ### char16 and char32
-char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits across all the platforms.
-Similarly, the size of char32_t data type is fixed at 32 bits across all the platforms. 
-The shorthand for char16_t is u, char32_t is U.
+char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits and the size of char32_t data type is fixed at 32 bits across all the platforms.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/char16%20and%20char32).
 ### constexpr
-The keyword constexpr means constant expression. Like const, it can be applied to variables: A compiler error is raised when any code attempts to modify the value. Unlike const, constexpr can also be applied to functions and class constructors. constexpr indicates that the value, or return value, is constant and, where possible, is computed at compile time.
+The keyword constexpr means constant expression. Like const, it can be applied to variable. Also, unlike const, constexpr can also be applied to functions and class constructors. constexpr indicates variable value, or return value, is constant and, where possible, is computed at compile time.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/constexpr).
 ### decltype
 decltype is reverse of auto where a data type can be deduced from a variable or an expression. decltype can also be used specify return types in template functions.
@@ -29,17 +27,16 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/list
 The size of long is not consistent across platforms. In linux,  it's 64 bits and in Windows it's 32 bits.The new data type long long is a 64 bits across all the platforms. The short form long long is ll or LL.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/long%20long).
 ### move semantics
-move semantics takes advantage of  the new rvalue reference to optimize temporary object creation. In order to use move semantics, classes are expected to support rvalue copy constructor and rvalue assignment operator. In these functions, expensive resources such as heap memory are stripped off the source object and assigned to the target object instead of reallocation. After move operation, source object may not be used. 
-The move operation itself involves just changing the lavalue type to rvalue type.
+move semantics takes advantage of  the new rvalue reference to optimize temporary object creation and its reuse. In order to use move semantics, classes are expected to support rvalue copy constructor and rvalue assignment operator. In these functions, expensive resources such as heap memory are stripped off the source object and assigned to the target object instead of reallocation.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/move%20semantics).
 ### noexcept
 noexcept specifier determines whether a function could throw exceptions. 
 More details can be found [here](https://modcpp11.blogspot.com/search/label/noexcept).
 ### nullptr
-NULL is defined as macro, represented as an integer of value 0. However it's misused to represent null pointers as shown below.
+NULL is defined as macro, represented as an integer with the value of 0. However it's misused to represent null pointers. nullptr_t data type is introduced specifically to prevent misuse of NULL in place of null pointers. nullptr is the only instance of this type and can be used in place of a null pointer.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/nullptr).
 ### numeric limits
-numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros. For example, numeric_limits<int>::max() can be used in place INT_MAX. These classes can be queried for minimum, maximum values and other properties such as number of digits, signed etc. 
+numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/numeric%20limits).
 ### perfect forwarding
 The rvalue semantics enable passing the arguments without ambiguity  to the handler function in the factory method.
@@ -55,7 +52,7 @@ More details can be found [here](https://modcpp11.blogspot.com/search/label/raw%
 ### rvalue reference
 When using STL containers such as lists, vectors, maps, a lot of temporary objects are created and destroyed during the life time of an application. 
 To overcome this, rvalue reference and move semantics are introduced.
-An rvalue reference behaves just like an lvalue reference except that it can bind to a temporary (an rvalue), whereas you can not bind a (non const) lvalue reference to an rvalue.
+An rvalue reference behaves just like an lvalue reference except that it can bind to a temporary value.
 More details can be found [here](https://modcpp11.blogspot.com/search/label/rvalue%20reference).
 ### string literals
 string literals prefixed with u8 are encoded as UTF-8. The difference between a C string and u8 string is that way they are encoded which can vary based on platforms.  
