@@ -2,7 +2,7 @@
 *Discusses some of the new features of C++ 11 and existing too*
 ## Language Features ##
 
-### Some Markdown text with <span style="color:blue">some *blue* text</span>.
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
 ### $${\color{red} auto }$$
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value. 
