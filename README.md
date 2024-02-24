@@ -2,6 +2,8 @@
 *Discusses some of the new features of C++ 11 and existing too*
 ## Language Features ##
 
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
+
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value. 
 
