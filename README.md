@@ -1,5 +1,5 @@
 # Modern C++ #
-*Discusses some of the new features of C++ 11 and existing too*
+*Discusses some of the regular and C++ 11 features*
 ## Language Features ##
 
 ### auto
