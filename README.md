@@ -6,7 +6,7 @@
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/auto.html).
 ### char16_t and char32_t
-char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits and the size of char32_t data type is fixed at 32 bits across all the platforms. char16_t is used for UTF-16 encoding and   char32_t is used for UTF-32 encoding.
+char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits and the size of char32_t data type is fixed at 32 bits across all the platforms. char16_t is used for UTF-16 encoding and   char32_t is used for UTF-32 encoding.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/char16t-and-char32t.html).
 ### constexpr
 The keyword constexpr means constant expression. Like const, it can be applied to variable. Also, unlike const, constexpr can also be applied to functions and class constructors. constexpr indicates variable value, or return value, which is constant and, where possible, is computed at compile time.  
