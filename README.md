@@ -33,7 +33,7 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.ht
 This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### bind
-bind() returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
+bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### lambda expression
 Lambdas are basically anonymous function objects generated right at the location where it's invoked or passed as an argument to a function. Lambdas are game changer since they seamlessly integrate into std lib algorithms, concurrency objects and more.  
