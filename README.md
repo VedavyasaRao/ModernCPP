@@ -17,6 +17,24 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/09/auto.html
 ### declval
 It's a template function for type T.It returns an rvalue reference to type T without referring to any object, making it possible to use member functions in the operand of the decltype specifier without the need to go through constructors. T may be an incomplete type.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/auto.html).
+### predefined function objects
+Predefined function objects are defined in the std. library to perform bitwise, relational, logical and arithmetic operations.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### function
+A function class can wrap any kind of callable element (such as functions and function objects) into a copyable object, and whose type depends solely on its call signature (and not on the callable element type itself).  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### reference_wrapper
+reference_wrapper is a class template that creates a wrapper around a reference to object or reference to function of type T. Instances of reference_wrapper are objects but they are implicitly convertible to T&, so that they can be used as arguments with the functions that take the underlying type by reference.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### ref and cref
+Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### mem_fn
+This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### bind
+bind() returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### lambda expression
 Lambdas are basically anonymous function objects generated right at the location where it's invoked or passed as an argument to a function. Lambdas are game changer since they seamlessly integrate into std lib algorithms, concurrency objects and more.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
