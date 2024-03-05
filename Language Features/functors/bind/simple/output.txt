@@ -1,0 +1,12 @@
+        struct MyPair 
+        {
+            double a,b;
+            double multiply() {return a*b;}
+        } ten_two {10,2};
+    
+bind (divides<int>{},10,2)()						 = 5
+bind (divides<int>{},placeholders::_1,2)(10)				 = 5
+bind (divides<int>{},placeholders::_2,placeholders::_1)(10,2)		 = 0
+bind<int> (divides<int>{},placeholders::_1,placeholders::_2)(10,3)	 = 3
+bind (&MyPair::multiply,placeholders::_1)(ten_two)			 = 20
+bind (&MyPair::a,ten_two)()						 = 10

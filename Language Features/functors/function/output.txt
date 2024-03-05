@@ -1,0 +1,45 @@
+***** free function demo *****       
+        int square_num(int i)
+        {
+            return i*i;
+        }
+    
+function<int(int)> {square_num}(-9)				 = 81
+function<int(int)> {bind(square_num,placeholders::_1)}(9)	 = 81
+function<int()>    {bind(square_num,9)}()			 = 81
+
+
+***** struct demo *****       
+        struct Foo
+        {
+            Foo(int num) : num_(num) {}
+            void print_add(int i) const { cout << num_ + i << endl; }
+            int num_;
+        } foo {200};
+    
+function<void(const Foo&, int)>{&Foo::print_add}(foo, 100)			 = 300
+function<int(Foo const&)> {&Foo::num_}(foo)					 = 200
+function<void(int)> {bind(&Foo::print_add, foo, placeholders::_1)}(2)		 = 202
+function<void(int)> {bind(&Foo::print_add, &foo, placeholders::_1)}(3)		 = 203
+
+
+***** functor demo *****
+function<int(int)>{negate<int>()}(18)		 = -18
+
+
+***** lambda expression demo *****
+function<void(int)> {[](int i) { cout << i << endl; }}(42)		 = 42
+       
+        auto factorial = [](int n)
+        {
+            // store a lambda object to emulate "recursive lambda"; aware of extra overhead
+            function<int(int)> fac = [&](int n) 
+            { 
+                cout << n << ' '; 
+                return (n < 2) ? 1 : fac(n - 1); 
+            };
+            // note that "auto fac = [&](int n) {...};" does not work in recursive calls
+            fac(n);
+        };
+    
+factorial(5)!	 = 5 4 3 2 1 

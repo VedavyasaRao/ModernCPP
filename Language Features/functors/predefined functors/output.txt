@@ -1,0 +1,25 @@
+**** bitwise ****
+bit_and{}(0xff,0x0c)		= 0xc
+bit_or{}(0xf0,0x0c)		= 0xfc
+bit_xor{}(0xff,0x0c)		= 0xf3
+
+**** relational ****
+not_equal_to{}(10,2)		= true
+equal_to{}(10,2)		= false
+greater{}(10,2)			= true
+greater_equal{}(10,2)		= true
+less{}(10,2)			= false
+less_equal{}(10,2)		= false
+
+**** logical ****
+logical_and{}(true,false)	= false
+logical_not{}(true)		= false
+logical_or{}(true,false)	= true
+
+**** arithmatic ****
+minus{}(10,2)			= 8
+modulus{}(10,2)			= 0
+multiplies{}(10,2)		= 20
+negate{}(10)			= -10
+divides{}(10,2)			= 5
+plus{}(10,2)			= 12

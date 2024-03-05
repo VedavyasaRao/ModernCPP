@@ -1,0 +1,22 @@
+
+        struct Foo
+        {
+            void display_greeting();
+            void display_number(int i);
+            int add_xy(int x, int y);
+            template<typename... Args> int add_many(Args... args);
+            int data = 7;
+        } f;
+        auto u = make_unique<Foo>();
+    
+
+**** using instance ****
+display_greeting(f)		 = Hello, world.
+display_number(f,42)		 = 42
+data(f)				 = 7
+add_xy(f, 1, 2)			 = 10
+
+**** using unique_ptr ****
+data(u)				 = 7
+add_xy(u, 1, 2)			 = 10
+add_many(u, 1, 2, 3)		 = 13

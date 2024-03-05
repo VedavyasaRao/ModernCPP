@@ -1,0 +1,35 @@
+void f(int n1, int n2, int n3, const int& n4, int n5);
+        int g(int n1);
+ 
+        struct Foo
+        {
+            void print_sum(int n1, int n2);
+        int data = 10;
+        } foo;
+    
+1) argument reordering and pass-by-reference: 
+ bind(f, placeholders::_2, 42, placeholders::_1, cref(n), n)(1, 2, 1001) = 2 42 1 10 7
+
+2) achieving the same effect using a lambda: 
+[&ncref = n, n](auto a, auto b, auto /*unused*/)(1, 2, 1001) = 2 42 1 10 7
+
+3) nested bind subexpressions share the placeholders: 
+bind(f, placeholders::_3, bind(g, placeholders::_3), placeholders::_3, 4, 5)(10, 11, 12) = 12 12 12 4 5
+
+4) bind a RNG with a distribution: 
+bind(uniform_int_distribution<>(0, 10), default_random_engine{})() = 1
+5) bind to a pointer to member function: 
+bind(&Foo::print_sum, &foo, 95, placeholders::_1) = 100
+
+6) bind to a mem_fn that is a pointer to member function: 
+bind(mem_fn(&Foo::print_sum), &foo, 95, placeholders::_1) = 100
+
+7) bind to a pointer to data member: 
+bind(&Foo::data, placeholders::_1)(foo) = 10
+
+8) bind to a mem_fn that is a pointer to data member: 
+bind(mem_fn(&Foo::data), placeholders::_1)(foo) = 10
+
+9) use smart pointers to call members of the referenced objects: 
+bind(mem_fn(&Foo::data), placeholders::_1)(make_shared<Foo>(foo)) = 10
+bind(mem_fn(&Foo::data), placeholders::_1)(make_unique<Foo>(foo)) = 10
