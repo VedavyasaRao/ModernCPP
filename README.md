@@ -17,24 +17,6 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/09/auto.html
 ### declval
 It's a template function for type T.It returns an rvalue reference to type T without referring to any object, making it possible to use member functions in the operand of the decltype specifier without the need to go through constructors. T may be an incomplete type.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/auto.html).
-### predefined function objects
-Predefined function objects are defined in the std. library to perform bitwise, relational, logical and arithmetic operations.  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### function
-A function class can wrap any kind of callable element (such as functions and function objects) into a copyable object, and whose type depends solely on its call signature (and not on the callable element type itself).  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### reference_wrapper
-reference_wrapper is a class template that creates a wrapper around a reference to object or reference to function of type T. Instances of reference_wrapper are objects but they are implicitly convertible to T&, so that they can be used as arguments with the functions that take the underlying type by reference.  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### ref and cref
-Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### mem_fn
-This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### bind
-bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
-More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### lambda expression
 Lambdas are basically anonymous function objects generated right at the location where it's invoked or passed as an argument to a function. Lambdas are game changer since they seamlessly integrate into std lib algorithms, concurrency objects and more.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
@@ -79,6 +61,9 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/09/variadic-
 CRT provides plethora of functions to handle strings. There are different functions for getting length, append, copy, find etc. 
 std::basic_string class attempts to objectify strings so that it's easier to use.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/11/string.html).
+### bind
+bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### chrono library
 Chrono library defines a set of Clocks that can represent a Duration or a specific Time Point. These are used by concurrency object APIs (*sleep_for(duration)* and *sleep_until(time_point)*) to pause processing within a thread.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/10/chrono-library.html).
@@ -89,6 +74,9 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/10/concurren
 In C++ 11, a new family of classes were introduced to handle exceptions with *exception* class as its root.  
 The derived classes overrides *what()* to return error string. In addition, newer classes such as *error_code* and *error_condition*  were added to return additional error information.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/09/exception.html).
+### function
+A function class can wrap any kind of callable element (such as functions and function objects) into a copyable object, and whose type depends solely on its call signature (and not on the callable element type itself).  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### io stream
 The IOStreams provides classes to perform IO for console, disk and memory as an alternative to CRT functions. In C++11, new classes were introduced to handle currency and time.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/11/iostream-classes-quick-tour-with.html).
@@ -96,12 +84,24 @@ More details can be found [here](https://modcpp11.blogspot.com/2023/11/iostream-
 Each country has one or more native speaking languages and writing systems or a scripts, numbering symbols, number grouping symbol, decimal point symbol, currency symbols, date format etc. 
 The *locale* and *facet* classes provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/11/internationalization-quick-tour-with.html).
+### mem_fn
+This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### numeric limits
 numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros such as INT_MAX.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/10/numeric-limits.html).
+### predefined function objects
+Predefined function objects are defined in the std. library to perform bitwise, relational, logical and arithmetic operations.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### ratio library
 standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
 More details can be found [here](https://modcpp11.blogspot.com/2023/10/ratio.html).
+### reference_wrapper
+reference_wrapper is a class template that creates a wrapper around a reference to object or reference to function of type T. Instances of reference_wrapper are objects but they are implicitly convertible to T&, so that they can be used as arguments with the functions that take the underlying type by reference.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
+### ref and cref
+Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
+More details can be found [here](https://modcpp11.blogspot.com/2023/09/lambda.html).
 ### regular expressions
 Regular expressions are indispensable when looking for a specific information.
 They are highly versatile to filter out information or for validating inputs without needing to write lots of code.  
