@@ -1,0 +1,10 @@
+prog.cc: In function 'int main()':
+prog.cc:25:13: error: use of deleted function 'void person::update(bool)'
+   25 |     p.update(true); //error function deleted
+      |     ~~~~~~~~^~~~~~
+prog.cc:11:10: note: declared here
+   11 |     void update (bool age)=delete;
+      |          ^~~~~~
+prog.cc:25:13: note: use '-fdiagnostics-all-candidates' to display considered candidates
+   25 |     p.update(true); //error function deleted
+      |     ~~~~~~~~^~~~~~

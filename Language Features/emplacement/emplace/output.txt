@@ -1,0 +1,35 @@
+memberwise constructor	: push_back(lvalue)
+memberwise constructor	: dummy
+copy constructor&&:dummy
+destructor:dummy
+
+
+insert(vs.begin(),s)
+copy constructor	: push_back(lvalue)
+copy constructor&&:dummy
+operator=&&:push_back(lvalue)
+destructor:push_back(lvalue)
+
+
+insert(vs.begin(),"insert(rvalue)")
+memberwise constructor	: insert(rvalue)
+copy constructor&&:dummy
+operator=&&:push_back(lvalue)
+operator=&&:insert(rvalue)
+destructor:insert(rvalue)
+
+
+emplace(vs.begin(), "emplace")
+memberwise constructor	: emplace
+copy constructor&&:dummy
+operator=&&:push_back(lvalue)
+operator=&&:insert(rvalue)
+operator=&&:emplace
+destructor:emplace
+
+
+destructor:push_back(lvalue)
+destructor:emplace
+destructor:insert(rvalue)
+destructor:push_back(lvalue)
+destructor:dummy

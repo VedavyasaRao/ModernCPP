@@ -1,0 +1,25 @@
+memberwise constructor	: push_back(lvalue)
+memberwise constructor	: dummy
+copy constructor&&:dummy
+destructor:dummy
+
+
+push_back(lvalue)
+copy constructor	: push_back(lvalue)
+
+
+push_back(rvalue)
+memberwise constructor	: push_back(rvalue)
+copy constructor&&:push_back(rvalue)
+destructor:push_back(rvalue)
+
+
+emplace_back()
+memberwise constructor	: emplace_back()
+
+
+destructor:push_back(lvalue)
+destructor:dummy
+destructor:push_back(lvalue)
+destructor:push_back(rvalue)
+destructor:emplace_back()
