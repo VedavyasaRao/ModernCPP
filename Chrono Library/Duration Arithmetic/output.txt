@@ -1,4 +1,4 @@
-ero:	duration<0, ratio<1,1>>
+Zero:	duration<0, ratio<1,1>>
 min:	duration<-9223372036854775808, ratio<1,1>>
 max:	duration<9223372036854775807, ratio<1,1>>
 
