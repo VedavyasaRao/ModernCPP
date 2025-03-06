@@ -1,0 +1,8 @@
+ prog.cc: In instantiation of 'void swap(T, T2) [with T = double; T2 = char]':
+prog.cc:14:9:   required from here
+   14 |     swap(d, ch);  //Compilation Error
+      |     ~~~~^~~~~~~
+prog.cc:6:31: error: static assertion failed: overflow
+    6 |     static_assert((sizeof(T2) > sizeof(T)), "overflow");
+      |                   ~~~~~~~~~~~~^~~~~~~~~~~~
+prog.cc:6:31: note: the comparison reduces to '(1 > 8)'
