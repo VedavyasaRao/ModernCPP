@@ -1,0 +1,9 @@
+prog.cc:13:10: error: 'void Y::print(double)' marked 'override', but does not override
+   13 |     void print(double) override {}
+      |          ^~~~~
+prog.cc:8:18: warning: 'virtual void X::print(int)' was hidden [-Woverloaded-virtual=]
+    8 |     virtual void print(int){}
+      |                  ^~~~~
+prog.cc:13:10: note:   by 'void Y::print(double)'
+   13 |     void print(double) override {}
+      |          ^~~~~
