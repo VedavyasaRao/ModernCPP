@@ -1,0 +1,9 @@
+prog.cc:13:10: error: virtual function 'virtual void Y::print(int)' overriding final function
+   13 |     void print(int) {}
+      |          ^~~~~
+prog.cc:8:18: note: overridden function is 'virtual void X::print(int)'
+    8 |     virtual void print(int) final {}
+      |                  ^~~~~
+prog.cc:21:8: error: cannot derive from 'final' base 'A' in derived type 'B'
+   21 | struct B: public A
+      |        ^
