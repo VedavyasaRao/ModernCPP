@@ -1,0 +1,4 @@
+prog.cc: In function 'int main()':
+prog.cc:23:15: error: too many initializers for 'Y'
+   23 |     Y yy{1,2,3}; //error
+      |               ^
