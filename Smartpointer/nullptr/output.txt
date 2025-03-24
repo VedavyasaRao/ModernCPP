@@ -1,4 +1,4 @@
-f(0);
+f((int)NULL);
 f(int a)
 f(0)
 

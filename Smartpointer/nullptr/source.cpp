@@ -18,11 +18,14 @@ void f(void* a)
 
 int main()
 {
-    cout << "f(0);" << endl;
-    f(0);
+    cout << "f((int)NULL);" << endl;
+    //f(NULL) compilation error
+    f((int)NULL);
     
     cout << "f((void*)NULL);" << endl;
+    //f(NULL) compilation error
     f((void*)NULL);
+    
     cout << "f(nullptr);" << endl;
     f(nullptr);
 }
