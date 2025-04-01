@@ -1,0 +1,2 @@
+divide(1,0)
+Caught exception: bad input:1/0
