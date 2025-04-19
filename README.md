@@ -1,7 +1,7 @@
 # Modern C++ #
 *Discusses some of the regular and C++ 11 and 14 features*
 ## New anguage Features ##
-
+The following discusses some of the new features introduced in C++11 and 14.
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value.  
 More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language-support.html#auto).
@@ -83,8 +83,25 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language
 With the variadic templates feature, it's possible to define template based class or function that can have any number (including zero) of parameters. 
 To accomplish this, a new kind of parameter called parameter pack is introduced that can singly represent a list of zero or more parameters in the templates definition. A template class or function with at least one parameter pack is called a variadic template.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/variadic-templates.html).
-## Library Features ##
+## type traits ##
+type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time. type_traits  can be divided into four categories. 
+### Utility classes
+type traits classes internally uses a number of utility classes  such as integral_constant in its implementation. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Utility).
+### Unary type traits
+Unary Type Traits describe a property of a single type. Most Unary Type Traits return true or false and are derived from true_type or false_type. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Unary).
+### Binary Type Traits
+Binary Type Traits provide information about a relationship between two types. Every Binary Type Trait return  true_type  or false_type. based on the presence or absence of a specific relationship between the two argument types.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Binary).
+### Transformation Type Traits
+Transformation Type Traits modify a type. Every Transformation Type Trait possesses a nested typedef named type that represents the result of the modification. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Transformation).
+### Memory Allocation
+Allocate uninitialized memory of POD type.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Memory).
 
+## Library Features ##
 ### basic_string
 CRT provides plethora of functions to handle strings. There are different functions for getting length, append, copy, find etc. 
 std::basic_string class attempts to objectify strings so that it's easier to use.  
