@@ -83,16 +83,8 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language
 With the variadic templates feature, it's possible to define template based class or function that can have any number (including zero) of parameters. 
 To accomplish this, a new kind of parameter called parameter pack is introduced that can singly represent a list of zero or more parameters in the templates definition. A template class or function with at least one parameter pack is called a variadic template.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/variadic-templates.html).
-
-| Month    | Savings |
-| -------- | ------- |
-| January  | $250    |
-| February | $80     |
-| March    | $420    |
-
-
 ## type traits ##
-type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time. type_traits  can be divided into four categories. 
+type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time.
 ### Utility classes
 type traits classes internally uses a number of utility classes  such as integral_constant in its implementation. 
 More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Utility).
@@ -108,12 +100,31 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.
 ### Memory Allocation
 Allocate uninitialized memory of POD type.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Memory).
-
-## Library Features ##
+## Literals and Strings ##
+strings and literals are essential part of any programming language. The following describes various facilities and classes available to handle strings and literals.
+### char_traits
+char_traits classes define common behavior such as comparison, assignment, copy etc. and also other aspects such as eof  type, offset type position type etc.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/chartraits.html).
+### char16_t and char32_t
+char16_t  and char32_t  were introduced to provide uniformity among other things. The size of char16_t data type is fixed at 16 bits and the size of char32_t data type is fixed at 32 bits across all the platforms. char16_t is used for UTF-16 encoding and   char32_t is used for UTF-32 encoding.  
+More details can be found [here➹](https://modcpp11.blogspot.com/p/strings-and-literals.html#char16_t).
+### Unicode String Literals
+string literals prefixed with u8 are encoded as UTF-8. Similarly, prefix for UTF-32 encoded strings is U. char_32_t is used for encoding UTF-32 strings. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/strings-and-literals.html#Unicode).
+### raw string
+Assigning a free flowing text to a string variable has been a challenge especially if it contains " character embedded in it.The raw string feature enables declaring strings containing special characters such as newline, tab etc as is without escaping.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/strings-and-literals.html#raw).
+### user defined literals
+In  C++, arithmetic types such as long, float can be represented with suffix as 1L,1.2f etc. C++11 extends this to represent standard library and user defined types using user defined literals.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/strings-and-literals.html#user).
 ### basic_string
 CRT provides plethora of functions to handle strings. There are different functions for getting length, append, copy, find etc. 
 std::basic_string class attempts to objectify strings so that it's easier to use.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/string.html).
+## regular expressions ##
+Regular expressions are indispensable when looking for a specific information.
+They are highly versatile to filter out information or for validating inputs without needing to write lots of code.  
+## Library Features ##
 ### bind
 bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
@@ -155,10 +166,6 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda
 ### ref and cref
 Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### regular expressions
-Regular expressions are indispensable when looking for a specific information.
-They are highly versatile to filter out information or for validating inputs without needing to write lots of code.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html).
 ### smart pointer
 CRT does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. New classes such as *unique_ptr* for sole ownership, *shared_ptr* for shared ownership and *weak_ptr* for non ownership references.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/smartpointer.html).
