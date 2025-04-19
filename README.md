@@ -83,6 +83,14 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language
 With the variadic templates feature, it's possible to define template based class or function that can have any number (including zero) of parameters. 
 To accomplish this, a new kind of parameter called parameter pack is introduced that can singly represent a list of zero or more parameters in the templates definition. A template class or function with at least one parameter pack is called a variadic template.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/variadic-templates.html).
+
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
+
+
 ## type traits ##
 type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time. type_traits  can be divided into four categories. 
 ### Utility classes
