@@ -1,6 +1,6 @@
 # Modern C++ #
 *Discusses some of the regular and C++ 11 and 14 features*
-## New anguage Features ##
+## New Language Features ##
 The following discusses some of the new features introduced in C++11 and 14.
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value.  
@@ -124,84 +124,74 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/string
 ## regular expressions ##
 Regular expressions are indispensable when looking for a specific information.
 They are highly versatile to filter out information or for validating inputs without needing to write lots of code.  
-## Library Features ##
-### bind
-bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### chrono library
-Chrono library defines a set of Clocks that can represent a Duration or a specific Time Point. These are used by concurrency object APIs (*sleep_for(duration)* and *sleep_until(time_point)*) to pause processing within a thread.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/chrono-library.html).
-### concurrency
-C++11 introduces a new memory model and the concurrency library to support multi threaded peogramming.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/concurrency-quick-tour-with-examples.html).
-### exceptions
-In C++ 11, a new family of classes were introduced to handle exceptions with *exception* class as its root.  
-The derived classes overrides *what()* to return error string. In addition, newer classes such as *error_code* and *error_condition*  were added to return additional error information.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/exception.html).
-### function
-A function class can wrap any kind of callable element (such as functions and function objects) into a copyable object, and whose type depends solely on its call signature (and not on the callable element type itself).  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### io stream
-The IOStreams provides classes to perform IO for console, disk and memory as an alternative to CRT functions. In C++11, new classes were introduced to handle currency and time.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/iostream-classes-quick-tour-with.html).
-### localization
+### Validation
+Regular expressions can be used to validate an input.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Validation).
+### Extraction
+Regular expressions can be used to extract information from the input strings.   
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Extraction).
+### Dot character
+Patterns can use . to map any character except some control characters. Note that it has no effect in a character class construct and maps to decimal point.   
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Dot).
+### Character class
+The basic ingredient of the regular expression grammar is a character class. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Character).
+### Shorthands
+To reduce clutter, shorthands to character classes are provided. These can be freely used in another character class or even in pattern.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Predefined).
+### Escaping
+Some times a meta character needs to be escaped in a pattern or a character class. Escaping is done by placing \  in front of the meta character. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Escaping).
+### Anchors and boundary markers
+Anchors and  boundary markers marks special locations such as beginning or ending of the lines, word boundaries etc. These can be used only in the pattern and not in character classes.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Anchors).
+### Quantifiers
+Quantifiers determine  repetitiveness of a token in the pattern. Quantifiers applies to any token in the pattern only. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Quantifiers).
+### Greedy, Lazy and Possessive Quantifiers
+Produces different results for the same patteren with different Quantifiers.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Greedy).
+### Capture groups
+The capture groups are one of the key aspects of the regular expression.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Capture).
+### Non capturing groups
+Non capturing groups are used for efficiency and optimization. As the name indicates, contents of non capturing groups are discarded.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Capture2).
+### References
+aptured groups in a pattern are internally labeled as \1, \2 , \3 etc.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#References).
+### Unicode support
+The behavior of the regular expression engine can be changed by setting flags in the pattern.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Unicode).
+### Branch Reset Groups
+Consider a pattern (1a)|(2a)|(1b)\1. This defines three capture groups. For the input 1a1a, it is expected to match, however it does not.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Branch).
+### LookAround
+There are 4 types look around, positive/negative look ahead/behind. Collectively they are called lookaround, are zero-length assertions just like the start and end of line, or start and end of word anchors. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#LookAround).
+### LookBehind with \K
+Due to certain restriction in matching expression of positive lookbehind i.e., <=expression,  as an alternative to positive lookbehind, \K switch can be used. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#LookBehind).
+### Atomic Grouping
+An atomic group is a group that, when the regex engine exits from it, automatically throws away all backtracking positions remembered by any tokens inside the group. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Atomic).
+### If-Then-Else Conditionals
+If-Then-Else is a special construct allows creation of conditional regular expressions.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#If).
+### Recursion
+Suppose the task is to find out if random number of open and close braces such as () or {} match, regular expression recursion comes to the rescue.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Recursion).
+### Subroutines
+Subroutines are applied to the capture groups. These are very similar to regular expression recursion. Instead of matching the entire regular expression again, a subroutine call only matches the regular expression inside a capturing group. A subroutine call can be made to any capturing group from anywhere in the pattern. A call made to same capturing group leads to recursion.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Subroutines).
+### Using Regular expressions in C++
+It's possible to replace  captured groups or entire match. Regular expressions is a part of in C++ 11 standard library,  however it does not support many features discussed here. An alternate would be to use boost libraries which seems compatible with feature rich  perl.
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Using).
+## localization ##
 Each country has one or more native speaking languages and writing systems or a scripts, numbering symbols, number grouping symbol, decimal point symbol, currency symbols, date format etc. 
 The *locale* and *facet* classes provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/internationalization-quick-tour-with.html).
-### mem_fn
-This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### numeric limits
-numeric_limits is a template class that defines functions such as min(), max() along with host of other functions that are related to arithmetic types. Specialized classes from numeric_limits are defined for fundamental arithmetic types such as int, double. These methods in these classes can be used instead of  of macros such as INT_MAX.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/numeric-limits.html).
-### predefined function objects
-Predefined function objects are defined in the std. library to perform bitwise, relational, logical and arithmetic operations.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### ratio library
-standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/ratio.html).
-### reference_wrapper
-reference_wrapper is a class template that creates a wrapper around a reference to object or reference to function of type T. Instances of reference_wrapper are objects but they are implicitly convertible to T&, so that they can be used as arguments with the functions that take the underlying type by reference.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### ref and cref
-Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/lambda.html).
-### smart pointer
-CRT does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. New classes such as *unique_ptr* for sole ownership, *shared_ptr* for shared ownership and *weak_ptr* for non ownership references.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/smartpointer.html).
-### type traits
-type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2024/02/type-traits.html).
-## Algorithms
+### Character Set
+A Character Set is a set of characters identifying a particular writing system of a particular region.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Character_Set).
 
-### Binary Search
-Binary search algorithms  operate on various types of containers such as sequence, associative and unordered that are sorted to perform actions such as finding upper, lower, equal bounds for a value or its existence.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-binary-search.html).
-### Heap
-Heap Algorithms  operate on various types of containers such as sequence, associative and unordered to organize the elements of a range that allows for fast retrieval of the element with the highest 
-value at any moment (with pop_heap), even repeatedly, while allowing for fast insertion of new elements  (with push_heap).  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-heap.html).
-### Lexicographical
-Lexicographical algorithms  operate on various types of containers such as sequence, associative and unordered to perform lexicographical actions such as comparing elements, generate sequences etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-numerics.html).
-### Merge
-Merge algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as merging sorted sequences, set union, intersection and differences.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-search-and-merge.html).
-### Min/Max
-Min/Max Algorithms  are template based functions that operate on various types of containers such as sequence, associative and unordered to perform actions such as finding the smallest and the largest element.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-minmax.html).
-### Modifying
-Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as  replace, remove, copy etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/algorithms-modifying.html).
-### Non modifying
-Non Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as search, find, count etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/algorithmsnon-modifying.html).
-### Numerical
-Numerical algorithms  operate on various types of containers such as sequence, associative and unordered to perform operations on the elements of a range to return a value or a sequence.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-numerical.html).
-### Partitions
-Partitions are commonly used for searching and sorting. Partitioning algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as partition, sort and more.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-partitions_18.html).
-### Sort
-Sorting Algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as sorting.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-partitions.html).
+
