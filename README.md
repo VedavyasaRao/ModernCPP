@@ -324,3 +324,43 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.ht
 ### uninitialized_memory
 Following iterators are defined.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#uninitialized_memory).
+## Algorithms
+The standard library template based algorithms to process containers using iterators for a variety of purposes (e.g. searching, sorting, counting, manipulating) that operate on ranges of elements.
+### Complexity Analysis
+Asymptotic Notation is used to describe the represent time complexity of an algorithm where it represents time taken to execute the algorithm for a given input, n. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/complexity-analysis.html).
+### Binary Search
+Binary search algorithms  operate on various types of containers such as sequence, associative and unordered that are sorted to perform actions such as finding upper, lower, equal bounds for a value or its existence.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-binary-search.html).
+### Heap
+Heap Algorithms  operate on various types of containers such as sequence, associative and unordered to organize the elements of a range that allows for fast retrieval of the element with the highest 
+value at any moment (with pop_heap), even repeatedly, while allowing for fast insertion of new elements  (with push_heap).  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-heap.html).
+### Lexicographical
+Lexicographical algorithms  operate on various types of containers such as sequence, associative and unordered to perform lexicographical actions such as comparing elements, generate sequences etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-numerics.html).
+### Merge
+Merge algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as merging sorted sequences, set union, intersection and differences.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-search-and-merge.html).
+### Min/Max
+Min/Max Algorithms  are template based functions that operate on various types of containers such as sequence, associative and unordered to perform actions such as finding the smallest and the largest element.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-minmax.html).
+### Modifying
+Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as  replace, remove, copy etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/algorithms-modifying.html).
+### Non modifying
+Non Modifying Algorithms  operate transparently on containers such as lists, vectors, maps, sets, arrays etc.  using a pair of iterators, These are collectively known as sequences. They perform actions such as search, find, count etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/algorithmsnon-modifying.html).
+### Numerical
+Numerical algorithms  operate on various types of containers such as sequence, associative and unordered to perform operations on the elements of a range to return a value or a sequence.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-numerical.html).
+### Partitions
+Partitions are commonly used for searching and sorting. Partitioning algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as partition, sort and more.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-partitions_18.html).
+### Sort
+Sorting Algorithms  operate on various types of containers such as sequence, associative and unordered to perform actions such as sorting.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algorithms-partitions.html).
+### uninitialized memory
+uninitialized memory algorithms enable populating objects in uninitialized memory. They construct the objects in-place, This allows to obtain fully constructed copies of the elements into a range of uninitialized memory, such as a memory block obtained by a call to malloc.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/10/unintialized-memory.html).
+
