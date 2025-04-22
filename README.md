@@ -431,3 +431,33 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/shared
 ### weak_ptr
 A weak_ptr is a smart pointer that holds a non-owning ("weak") reference to an object that is managed by shared_ptr. It must be converted to shared_ptr in order to access the referenced object.
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/weakptr.html).
+## chrono library ##
+Chrono library defines a set of Clocks that can represent a Duration or a specific Time Point. These are used by concurrency object APIs (*sleep_for(duration)* and *sleep_until(time_point)*) to pause processing within a thread.  
+### ratio library
+standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
+### ratio library
+standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
+### ratio library
+standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
+### ratio library
+standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
+### Terminology
+duration means a fixed number of  time units. A clock is a device that has a starting time or epoch time and a resolution or period. time_point is associated with a clock 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#Terminology).
+### duration
+duration means a fixed number of  time units. A Time unit could be a second or a millisecond or any user defined such as a day or a month. Examples, 10 milliseconds. 2 days etc.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/duration.html).
+### clocks
+Chrono library defines three clocks as defined below. The configuration may vary based on platform
+More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#clocks).
+### time_point
+time_point is associated with a clock . It represents the duration since epoch time of the clock.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/timepoint.html).
+### POSIX time functions
+POSIX CRT functions are widely used for time calculations. Some of the functions use the data types discussed below. In addition, environment time variable TZ is used for time zone settings.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#POSIX).
+
