@@ -436,15 +436,6 @@ Chrono library defines a set of Clocks that can represent a Duration or a specif
 ### ratio library
 standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
-### ratio library
-standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
-### ratio library
-standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
-### ratio library
-standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
-More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/ratio-library.html).
 ### Terminology
 duration means a fixed number of  time units. A clock is a device that has a starting time or epoch time and a resolution or period. time_point is associated with a clock 
 More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#Terminology).
@@ -460,4 +451,21 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/timepo
 ### POSIX time functions
 POSIX CRT functions are widely used for time calculations. Some of the functions use the data types discussed below. In addition, environment time variable TZ is used for time zone settings.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#POSIX).
+## Concurrency:stdLib ##
+Standard library concurrency objects can be broadly classified into five categories.
+### Execution Utilities Classes
+These classes store the result or exception to be retrieved asynchronously. They include promise, future, shared_future
+More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Execution_Utilities).
+### Execution Classes and functions
+These classes can execute code asynchronously. They include async(), thread, this_thread, packaged_task
+More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Execution_Classes).
+### Synchronization Classes and functions
+These classes provide synchronization between Execution Classes. They include mutex, timed_mutex, recursive_mutex, recursive_timed_mutex, conditional variable, conditional variable_any, call_once()
+More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Synchronization_Classes).
+### Synchronization Utility Classes
+These classes provide wrapper for Synchronization classes. They include lock_guard, unique_lock, shared_lock, lock()
+More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Synchronization_Utility).
+### Lock free programming
+The synchronization mechanisms discussed earlier uses operating system provided objects using atomic classes which provide interlocked atomic operations.. They include atomic, atomic_flag
+More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Lock_free).
 
