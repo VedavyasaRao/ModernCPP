@@ -279,3 +279,48 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/system
 ### Predefined System error enumerations
 The standard library provides predefined enumeration classes to define error conditions for these categories: generic_category, iostream_category and future_categoty.
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/predefined-system-error-enumarations.html).
+## Containers ##
+STL provides a host of template based containers serving as arrays and lookups to store and retrieve any data type.
+### sequence containers
+These containers  store data sequentially using different mechanisms.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/algorithms_22.html#sequence).
+### container adapters
+Container adapters provide specialized functionality and are based on a sequence container.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/algorithms_22.html#adapters).
+### associative containers
+These are basically lookup tables that store key value pairs. They can be classified into two categories - ordered and unordered.  The ordered category containers are implemented using balanced binary trees whereas the the unordered category containers are implemented using hash tables. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/algorithms_22.html#associative).
+### associative containers
+These are basically lookup tables that store key value pairs. They can be classified into two categories - ordered and unordered.  The ordered category containers are implemented using balanced binary trees whereas the the unordered category containers are implemented using hash tables. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/algorithms_22.html#associative).
+### emplacement functions
+STL containers such as vector, list, map to provide pushxxx and insert  functions to add new elements.
+Most of these functions endup creating a temporary object of the type T of the container.
+In C++ 11,  pushxxx and insert  function variants that would accept a rvalue reference were added. Also a new emplace functions were that would accept added to directly construct the object of type T in the container. Perfect forwarding is used to pass parameters for its constructor.
+More details can be found [here](https://modcpp11.blogspot.com/2024/05/emplacement-functions.html).
+## iterators ##
+STL provides a host of template based iterators that act as glue between containers and algorithms.
+### Operation
+An iterator basically wraps a range of elements from a STL container or even an array. It's analogues to a smartpointer. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#Operation).
+### overloaded operators
+The table below describes each of the overloaded operator in detail.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#overloaded).
+### Iterator Classification
+Iterators can be broadly classified as below based on their behavior.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#Classification).
+### iterator traits
+As noted earlier, an iterator acts as glue between containers and algorithms. An algorithm need not know all about the containers except for a few specific details such as type of iterator, or the value_ type.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#iterator_traits).
+### iterator apis
+terator apis generate iterators and enable manipulating iterators to change positions. As shown below, two categories of iterators are supported - forward and reverse. Forward iterators traverse from the first element to the last element. Reverse iterators traverse from the last element to the first element.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#iterator_apis).
+### predefined iterator adaptors 
+Iterator adaptors are a separate type of iterators with special behavior. They simplify the work with containers and are very useful in standard algorithms.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#iterator_adaptors).
+### predefined stream iterators
+Following stream iterators are predefined.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#stream_iterators).
+### uninitialized_memory
+Following iterators are defined.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#uninitialized_memory).
