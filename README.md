@@ -363,4 +363,52 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algori
 ### uninitialized memory
 uninitialized memory algorithms enable populating objects in uninitialized memory. They construct the objects in-place, This allows to obtain fully constructed copies of the elements into a range of uninitialized memory, such as a memory block obtained by a call to malloc.
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/10/unintialized-memory.html).
+## General Utilities
+Function Objects or Functors are widely used in std library and serve in various modes such as passing ref objects, wrapping up function objects, accessing member functions etc. 
+### Functors
+A functor is an object or structure that can be called like a function by overloading the function call operator () .  Functors also wrap a state during construction which can be used in function calls.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/general-utilities.html#Functors).
+### lambda expression
+A functor or function objects is an object or structure that can be called like a function by overloading the function call  
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/lambda-expression.html).
+### predefined function objects
+Predefined function objects are defined in the std. library to perform bitwise, relational, logical and arithmetic operations.  
+More details can be found [here➹](https://modcpp11.blogspot.com/p/general-utilities.html#Predefined).
+### function and class member pointers
+function pointers are pointers to functions that can be defined as variables. function pointer can be defined for "C" type free functions as shown below.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/general-utilities.html#functionptr).
+### reference_wrapper
+reference_wrapper is a class template that creates a wrapper around a reference to object or reference to function of type T. Instances of reference_wrapper are objects but they are implicitly convertible to T&, so that they can be used as arguments with the functions that take the underlying type by reference.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/referencewrapper.html).
+### ref and cref
+Function templates ref and cref are helper functions that generate an object of type reference_wrapper, using template argument deduction to determine the template argument of the result.  
+More details about ref can be found [here➹](https://modcpp11.blogspot.com/2025/02/referencewrapper.html#ref).
+More details about cref can be found [here➹](https://modcpp11.blogspot.com/2025/02/referencewrapper.html#cref).
+### function
+A function class can wrap any kind of callable element (such as functions and function objects) into a copyable object, and whose type depends solely on its call signature (and not on the callable element type itself).  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/function.html).
+### placeholder namespace
+This namespace defines an unspecified number of objects: _1, _2, _3,..._N, where _N is implementation specific upper limit. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/function.html#placeholder).
+### placeholder namespace
+This namespace defines an unspecified number of objects: _1, _2, _3,..._N, where _N is implementation specific upper limit. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/function.html#is_placeholder).
+### mem_fn
+This function converts member function to a functor whose functional call invokes the member function pointed by pm.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/function.html#mem_fn).
+### bind
+bind function returns a function object based on fn, but with its arguments bound to args. The syntax is as shown below.  
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/function.html#bind).
+### smart pointer
+CRT does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. New classes such as *unique_ptr* for sole ownership, *shared_ptr* for shared ownership and *weak_ptr* for non ownership references.  
+More details can be found [here➹](https://modcpp11.blogspot.com/p/general-utilities.html).
+### allocator
+Allocators are classes that define memory models to be used by some parts of the Standard Library, and most specifically, by STL containers.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/allocator.html).
+### allocator_traits
+This template supplies a uniform interface for allocator types.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/allocatortraits.html).
+
+
+
 
