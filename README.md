@@ -224,3 +224,58 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/localization
 ### String and stream conversions
 Performs conversions between wide strings and byte strings (on either direction) using a conversion object of type 
 More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#stream_conversions).
+## I/O Streams ##
+The CRT provides  printf() variants to emit formatted output of data such as integers, boolean, strings etc. on different targets such as console, character buffers, files. 
+Similarly, CRT also provides  scanf() variants to extract input from console, character buffers, files for data such as integers, boolean, strings etc
+### Class Structure
+The following depicts the class structure. Note that classes that start with the letter w are defined for whcar_t and other classes are defined for char. char16_t and char32_t are not supported. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#Structure).
+### Class Organization
+The classes can be grouped into following categories - Primitive base, Intermediate base , disk based  streams and String based streams.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/class-organization.html).
+### Primitive Base classes
+The following describes each of the bases classes in detail. It also includes console I/O stream objects.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#Primitive).
+### IO Stream extraction and insertion operators and Manipulators
+istreams defines extraction operators that are basically overloaded operator >>() functions to extract values from the inputs. Similarly, ostreams defines insertion operators that are basically overloaded operator<<() functions to insert values into the output.
+Manipulators are helper functions that prepare the input/output streams before using operator << or operator >>.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/input-output-manipulators.html).
+### Disk based Streams
+These provides stream classes  that can be used Input only, Output only or Both with files.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#Disk).
+### String based streams
+These provides stream classes  that can be used Input only, Output only or Both with string.
+Classes that does input only are derived from basic_istream. Similarly classes that does output only are derived from basic_ostream. Classes that do both input and output are derived from basic_iostream class.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#String).
+### Stream iterators
+istream_iterator and ostream_iterator can be used for typed input and  output. They are faster as they skip construction of sentry objects.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#iterators).
+### Streambuf iterators
+streambuf defines input iterator and output iterator for untyped input and output.
+istreambuf_iterator and ostreambuf_iterator can be used instead of raw i/o apis.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#Streambuf_iterators).
+## Diagnostics ##
+The CRT provides  printf() variants to emit formatted output of data such as integers, boolean, strings etc. on different targets such as console, character buffers, files. 
+Similarly, CRT also provides  scanf() variants to extract input from console, character buffers, files for data such as integers, boolean, strings etc
+### exception class
+n C++ 11, a new family of classes were introduced to handle exceptions with exception class as its root. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/diagnostics.html#exception).
+### Standard Library Exception hierarchy
+The following shows the hierarchy of exceptions. Some of these are thrown by the standard library. It can be grouped into three categories. User applications can also throw them.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/diagnostics.html#Standard).
+### Standard Library Exception Categories
+This discusses various standard library exceptions with examples.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/standard-library-exceptions.html).
+### Advanced Exception Handling
+The following discusses how to handle an exception, nested exceptions, uncaught and unexpected exceptions, termination. Also setting exception and termination handlers.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/exceptionptr.html).
+### Handling Exception Failures
+When an exception is unhandled, it leads to termination of the application. The following discusses setting up custom handlers that's called before before termination.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/handling-exception-failures.html).
+### System Errors
+System error numbers are different in different platforms. e.g., file system errors.  In C++11,  a new exception class system_error along with helper classes - error_category,  error_code, error_condition 
+were introduced to the diagnostic infrastructure to bring uniformity and develop cross platform applications.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/system-errors.html).
+### Predefined System error enumerations
+The standard library provides predefined enumeration classes to define error conditions for these categories: generic_category, iostream_category and future_categoty.
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/predefined-system-error-enumarations.html).
