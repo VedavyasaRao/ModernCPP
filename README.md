@@ -408,7 +408,26 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/alloca
 ### allocator_traits
 This template supplies a uniform interface for allocator types.
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/allocatortraits.html).
-
-
-
-
+## smart pointer ##
+Internally C/C+++ runtime does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. 
+### allocator
+Allocators are classes that define memory models to be used by some parts of the Standard Library, and most specifically, by STL containers.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/allocator.html).
+### nullptr_t
+nullptr_t data type is introduced specifically to prevent misuse of NULL in place of null pointers. nullptr is the only instance of this type and can be used in place of a null pointer.  
+More details can be found [here➹](https://modcpp11.blogspot.com/p/smartpointers.html#nullptr).
+### smartpointer
+A Smartpointer is basically a RAII (Resource Acquisition Is Initialization) object that wraps a pointer to an object or an array. When the smartpointer object is destroyed, the underlying memory of the pointer is released. A smartpointer uses dereferencing operators such as [], * and -> to access the object or its members the pointer is inferring.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/smartpointers.html#smartpointer).
+### default_delete
+default_delete is a functor object. aka deleter  object used by smart pointers to recycle the resources.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/defaultdelete.html).
+### unique_ptr
+unique_ptr are useful when a resource such as a piece of memory or a file handle needs to be singly managed.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/uniqueptr.html).
+### shared_ptr
+shared_ptr are useful when a resource such as a piece of memory or a file handle can be collectively shared by multiple owners.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/sharedptr.html).
+### weak_ptr
+A weak_ptr is a smart pointer that holds a non-owning ("weak") reference to an object that is managed by shared_ptr. It must be converted to shared_ptr in order to access the referenced object.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/weakptr.html).
