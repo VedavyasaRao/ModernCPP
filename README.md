@@ -193,5 +193,34 @@ The *locale* and *facet* classes provide the support for all these aspects so th
 ### Character Set
 A Character Set is a set of characters identifying a particular writing system of a particular region.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Character_Set).
-
-
+### Encoding
+Character encoding is the process of assigning numbers to the characters of the character set, allowing them to be stored, transmitted, and transformed using digital computers so that they can be reinterpreted back correctly. 
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/encoding.html).
+### codepages
+A code page is basically a coded character set. The term code page initially referred to the page number of IBM standard character set manual containing character mapping for plethora of character sets. 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#codepages).
+### Localization
+Internationalization is the process of designing and developing software or applications to be accessible and adaptable to different languages, cultures, and regions. Localization is the process of adapting software or applications to meet the language, cultural, and other requirements of a specific target market or locale. 
+While internationalization creates a framework that supports multiple languages and regions, localization involves customizing the software or application for a specific target market or region.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Localization).
+### Locales
+A locale is a collection of information pertaining to a culture, region, and language. Locales are physically stored in external files in POSIX environments. In Windows, they are located in the registry.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Locales).
+### Locales in C
+In C, locales can be set using setlocale() api.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Locales_C).
+### locale class
+In C++, a locales are represented by a locale object, which  is a collection of indexed facets. It also contains a basic_regex object.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/01/locale.html).
+### Facets
+facets are defined for each category.  It's possible to override default behavior of a fact.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Facets).
+### Character classification and conversion
+CRT provides set of functions to classify characters and changes their cases to  upper or lower. Standard library also provides template based functions to provide the same facility.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/character-classification-and-conversion.html).
+### Unicode Conversion Facets
+he following are Codecvt based facets to convert Unicode based formats with each other. For example, conversion from  UTF-8 to UCS-2, UTF-16 and UTF-32. Also reverse.
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#Unicode_Conversion).
+### String and stream conversions
+Performs conversions between wide strings and byte strings (on either direction) using a conversion object of type 
+More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#stream_conversions).
