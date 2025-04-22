@@ -468,4 +468,30 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.
 ### Lock free programming
 The synchronization mechanisms discussed earlier uses operating system provided objects using atomic classes which provide interlocked atomic operations.. They include atomic, atomic_flag
 More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Lock_free).
+## Concurrency:win32 ##
+The following discusses concurrency objects that are available in Windows win32 API and from standard library.
+### Execution objects
+These objects execute code in threads, thread pools APC queues.
+More details can be found [https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Execution).
+### Synchronization objects
+These objects are used by execution objects to provide synchronizations within a process or across. Some provide specialization for reader-writer and producer - consumer scenarios. They include Critical Section,Mutex,Event,Semaphore,Slim Reader/Writer,Conditional Variable,WaitOnAddress,InitOnce,Interlocked
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html).
+## Numerical Library ##
+Standard Library provides classes such as bitset to handle bits, valarray to handle matrix operations. random number generators and distributions.
+### long long
+The size of long is not consistent across platforms. In linux,  it's 64 bits and in Windows it's 32 bits.
+The new data type long long address this by keeping size at 64 bits across all the platforms. 
+More details can be found [https://modcpp11.blogspot.com/p/numerical-library.html#long_long).
+### long long
+The size of long is not consistent across platforms. In linux,  it's 64 bits and in Windows it's 32 bits.
+The new data type long long address this by keeping size at 64 bits across all the platforms. 
+More details can be found [https://modcpp11.blogspot.com/p/numerical-library.html#long_long).
+### numeric limits
+Maximum and minimum values of integral types such as int, short, long have been defined in <climits>.
+Similarly, Maximum and minimum values for float, double are defined in <cfloat>. However these are defined as macros. For example, INT_MAX, INT_MIN, FLT_MIN,FLT_MAX etc.
+More details can be found [https://modcpp11.blogspot.com/2023/10/numeric-limits.html).
+### valarray
+In C/C++,  fixed size arrays can be allocated on the stack and variable size arrays are allocated on the heap. However this is inflexible and also managing  the array such as adding elements, removing elements or retrieving will require extra code. 
+The standard library provides valarray class is similar to a vector but mathematical functions can be applied directly to all the elements. It also allows to get different cross section of the elements in the valarray including  multidimensional using helper classes.
+More details can be found [https://modcpp11.blogspot.com/2024/09/valarray.html).
 
