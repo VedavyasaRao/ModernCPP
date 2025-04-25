@@ -1,14 +1,13 @@
 # Modern C++ #
 *Discusses some of the regular and C++ 11 and 14 features*
 ## TOC ##
-||||
-| -|-|-|
-| [New Language Features➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#new-language-features)      | [type traits➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#type-traits)     | [Literals and Strings➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#literals-and-strings)     |
-| [regular expressions➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#regular-expressions)      | [localization➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#localization)     | [I/O Streams➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#io-streams)     |
-| [Diagnostics➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#diagnostics)      | [Containers➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#containers)     | [iterators➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#iterators)     |
-| [Algorithms➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#algorithms)      | [General Utilities➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#general-utilities)     | [smart pointer➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#smart-pointer-1)     |
-| [chrono library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#chrono-library)      | [Concurrency:stdLib➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencystdlib)     | [Concurrency:win32➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencywin32)     |
-| [Numerical Library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#numerical-library)      | | |
+|||||
+|-|-|-|-|
+|[New Language Features➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#new-language-features)|[type traits➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#type-traits)|[Literals and Strings➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#literals-and-strings)|[regular expressions➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#regular-expressions) |
+|[localization➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#localization)     | [I/O Streams➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#io-streams)| [Diagnostics➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#diagnostics)|[Containers➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#containers)|
+|[iterators➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#iterators)|[Algorithms➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#algorithms)|[General Utilities➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#general-utilities)|[smart pointer➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#smart-pointer-1)
+|[chrono library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#chrono-library)|[Concurrency:stdLib➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencystdlib)|[Concurrency:win32➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencywin32)|[Numerical Library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#numerical-library)|
+
 ## New Language Features ##
 The following discusses some of the new features introduced in C++11 and 14.
 ### auto
