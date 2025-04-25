@@ -3,7 +3,7 @@
 ## TOC ##
 ||||
 | -|-|-|
-| [New Language Features➹](https://modcpp11.blogspot.com/p/new-language-support.html#auto)      | [type traits➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#type-traits)     | [Literals and Strings➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#literals-and-strings)     |
+| [New Language Features➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#new-language-features)      | [type traits➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#type-traits)     | [Literals and Strings➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#literals-and-strings)     |
 | [regular expressions➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#regular-expressions)      | [localization➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#localization)     | [I/O Streams➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#io-streams)     |
 | [Diagnostics➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#diagnostics)      | [Containers➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#containers)     | [iterators➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#iterators)     |
 | [Algorithms➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#algorithms)      | [General Utilities➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#general-utilities)     | [smart pointer➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#smart-pointer-1)     |
