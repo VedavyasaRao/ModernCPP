@@ -8,7 +8,7 @@
 |[iterators➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#iterators)|[Algorithms➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#algorithms)|[General Utilities➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#general-utilities)|[smart pointer➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#smart-pointer-1)
 |[chrono library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#chrono-library)|[Concurrency:stdLib➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencystdlib)|[Concurrency:win32➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#concurrencywin32)|[Numerical Library➹](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#numerical-library)|
 
-## New Language Features ##
+## <span style='color: blue;'>New Language Features</span> ##
 The following discusses some of the new features introduced in C++11 and 14.
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value.  
@@ -91,7 +91,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language
 With the variadic templates feature, it's possible to define template based class or function that can have any number (including zero) of parameters. 
 To accomplish this, a new kind of parameter called parameter pack is introduced that can singly represent a list of zero or more parameters in the templates definition. A template class or function with at least one parameter pack is called a variadic template.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/09/variadic-templates.html).
-## type traits ##
+## <span style='color: blue;'>type traits</span> ##
 type_traits were introduced in C++11, basically defines templates for compile-time constants that give information about the properties of their type arguments, or produce transformed types. The classes and templates in type_traits are used to support type inference, classification, and transformation at compile time.
 ### Utility classes
 type traits classes internally uses a number of utility classes  such as integral_constant in its implementation. 
@@ -108,7 +108,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.
 ### Memory Allocation
 Allocate uninitialized memory of POD type.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/type-traits.html#Memory).
-## Literals and Strings ##
+## <span style='color: blue;'>Literals and Strings</span> ##
 strings and literals are essential part of any programming language. The following describes various facilities and classes available to handle strings and literals.
 ### char_traits
 char_traits classes define common behavior such as comparison, assignment, copy etc. and also other aspects such as eof  type, offset type position type etc.
@@ -129,7 +129,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/strings-and-
 CRT provides plethora of functions to handle strings. There are different functions for getting length, append, copy, find etc. 
 std::basic_string class attempts to objectify strings so that it's easier to use.  
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/string.html).
-## regular expressions ##
+## <span style='color: blue;'>regular expressions</span> ##
 Regular expressions are indispensable when looking for a specific information.
 They are highly versatile to filter out information or for validating inputs without needing to write lots of code.  
 ### Validation
@@ -195,7 +195,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regula
 ### Using Regular expressions in C++
 It's possible to replace  captured groups or entire match. Regular expressions is a part of in C++ 11 standard library,  however it does not support many features discussed here. An alternate would be to use boost libraries which seems compatible with feature rich  perl.
 More details can be found [here➹](https://modcpp11.blogspot.com/2023/11/regular-expression-quick-tour-with_6.html#Using).
-## localization ##
+## <span style='color: blue;'>localization</span> ##
 Each country has one or more native speaking languages and writing systems or a scripts, numbering symbols, number grouping symbol, decimal point symbol, currency symbols, date format etc. 
 The *locale* and *facet* classes provide the support for all these aspects so that it can be integrated into the daily lives of the people, government and businesses etc.  
 ### Character Set
@@ -232,7 +232,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/localization
 ### String and stream conversions
 Performs conversions between wide strings and byte strings (on either direction) using a conversion object of type 
 More details can be found [here➹](https://modcpp11.blogspot.com/p/localization.html#stream_conversions).
-## I/O Streams ##
+## <span style='color: blue;'>I/O Streams</span> ##
 The CRT provides  printf() variants to emit formatted output of data such as integers, boolean, strings etc. on different targets such as console, character buffers, files. 
 Similarly, CRT also provides  scanf() variants to extract input from console, character buffers, files for data such as integers, boolean, strings etc
 ### Class Structure
@@ -262,7 +262,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-local
 streambuf defines input iterator and output iterator for untyped input and output.
 istreambuf_iterator and ostreambuf_iterator can be used instead of raw i/o apis.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/io-and-locales.html#Streambuf_iterators).
-## Diagnostics ##
+## <span style='color: blue;'>Diagnostics</span> ##
 The CRT provides  printf() variants to emit formatted output of data such as integers, boolean, strings etc. on different targets such as console, character buffers, files. 
 Similarly, CRT also provides  scanf() variants to extract input from console, character buffers, files for data such as integers, boolean, strings etc
 ### exception class
@@ -287,7 +287,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/system
 ### Predefined System error enumerations
 The standard library provides predefined enumeration classes to define error conditions for these categories: generic_category, iostream_category and future_categoty.
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/12/predefined-system-error-enumarations.html).
-## Containers ##
+## <span style='color: blue;'>Containers</span> ##
 STL provides a host of template based containers serving as arrays and lookups to store and retrieve any data type.
 ### sequence containers
 These containers  store data sequentially using different mechanisms.
@@ -306,7 +306,7 @@ STL containers such as vector, list, map to provide pushxxx and insert  function
 Most of these functions endup creating a temporary object of the type T of the container.
 In C++ 11,  pushxxx and insert  function variants that would accept a rvalue reference were added. Also a new emplace functions were that would accept added to directly construct the object of type T in the container. Perfect forwarding is used to pass parameters for its constructor.
 More details can be found [here](https://modcpp11.blogspot.com/2024/05/emplacement-functions.html).
-## iterators ##
+## <span style='color: blue;'>iterators</span> ##
 STL provides a host of template based iterators that act as glue between containers and algorithms.
 ### Operation
 An iterator basically wraps a range of elements from a STL container or even an array. It's analogues to a smartpointer. 
@@ -332,7 +332,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.ht
 ### uninitialized_memory
 Following iterators are defined.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/iterators.html#uninitialized_memory).
-## Algorithms
+## <span style='color: blue;'>Algorithms</span>
 The standard library template based algorithms to process containers using iterators for a variety of purposes (e.g. searching, sorting, counting, manipulating) that operate on ranges of elements.
 ### Complexity Analysis
 Asymptotic Notation is used to describe the represent time complexity of an algorithm where it represents time taken to execute the algorithm for a given input, n. 
@@ -371,7 +371,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/12/algori
 ### uninitialized memory
 uninitialized memory algorithms enable populating objects in uninitialized memory. They construct the objects in-place, This allows to obtain fully constructed copies of the elements into a range of uninitialized memory, such as a memory block obtained by a call to malloc.
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/10/unintialized-memory.html).
-## General Utilities
+## <span style='color: blue;'>General Utilities</span>
 Function Objects or Functors are widely used in std library and serve in various modes such as passing ref objects, wrapping up function objects, accessing member functions etc. 
 ### Functors
 A functor is an object or structure that can be called like a function by overloading the function call operator () .  Functors also wrap a state during construction which can be used in function calls.
@@ -416,7 +416,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/alloca
 ### allocator_traits
 This template supplies a uniform interface for allocator types.
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/allocatortraits.html).
-## smart pointer ##
+## <span style='color: blue;'>smart pointer</span> ##
 Internally C/C+++ runtime does not have garbage collector support therefore  dangling pointers, leaked resources causes instability in applications. Smartpointers are  used to get around this issue. 
 ### allocator
 Allocators are classes that define memory models to be used by some parts of the Standard Library, and most specifically, by STL containers.
@@ -439,7 +439,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/shared
 ### weak_ptr
 A weak_ptr is a smart pointer that holds a non-owning ("weak") reference to an object that is managed by shared_ptr. It must be converted to shared_ptr in order to access the referenced object.
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/weakptr.html).
-## chrono library ##
+## <span style='color: blue;'>chrono library</span> ##
 Chrono library defines a set of Clocks that can represent a Duration or a specific Time Point. These are used by concurrency object APIs (*sleep_for(duration)* and *sleep_until(time_point)*) to pause processing within a thread.  
 ### ratio library
 standard library defines a new template class *ratio* to define ratios that can be used only during compile time.*ratio* is used in chrono library to represent different time units such as millisecond, hour etc.  
@@ -459,7 +459,7 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/02/timepo
 ### POSIX time functions
 POSIX CRT functions are widely used for time calculations. Some of the functions use the data types discussed below. In addition, environment time variable TZ is used for time zone settings.
 More details can be found [here➹](https://modcpp11.blogspot.com/p/chrono-library.html#POSIX).
-## Concurrency:stdLib ##
+## <span style='color: blue;'>Concurrency:stdLib</span> ##
 Standard library concurrency objects can be broadly classified into five categories.
 ### Execution Utilities Classes
 These classes store the result or exception to be retrieved asynchronously. They include promise, future, shared_future
@@ -476,30 +476,26 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.
 ### Lock free programming
 The synchronization mechanisms discussed earlier uses operating system provided objects using atomic classes which provide interlocked atomic operations.. They include atomic, atomic_flag
 More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Lock_free).
-## Concurrency:win32 ##
+## <span style='color: blue;'>Concurrency:win32</span> ##
 The following discusses concurrency objects that are available in Windows win32 API and from standard library.
 ### Execution objects
 These objects execute code in threads, thread pools APC queues.
-More details can be found [https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Execution).
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Execution).
 ### Synchronization objects
 These objects are used by execution objects to provide synchronizations within a process or across. Some provide specialization for reader-writer and producer - consumer scenarios. They include Critical Section,Mutex,Event,Semaphore,Slim Reader/Writer,Conditional Variable,WaitOnAddress,InitOnce,Interlocked
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html).
-## Numerical Library ##
+## <span style='color: blue;'>Numerical Library</span> ##
 Standard Library provides classes such as bitset to handle bits, valarray to handle matrix operations. random number generators and distributions.
 ### long long
 The size of long is not consistent across platforms. In linux,  it's 64 bits and in Windows it's 32 bits.
 The new data type long long address this by keeping size at 64 bits across all the platforms. 
-More details can be found [https://modcpp11.blogspot.com/p/numerical-library.html#long_long).
-### long long
-The size of long is not consistent across platforms. In linux,  it's 64 bits and in Windows it's 32 bits.
-The new data type long long address this by keeping size at 64 bits across all the platforms. 
-More details can be found [https://modcpp11.blogspot.com/p/numerical-library.html#long_long).
+More details can be found [here➹](https://modcpp11.blogspot.com/p/numerical-library.html#long_long).
 ### numeric limits
 Maximum and minimum values of integral types such as int, short, long have been defined in <climits>.
 Similarly, Maximum and minimum values for float, double are defined in <cfloat>. However these are defined as macros. For example, INT_MAX, INT_MIN, FLT_MIN,FLT_MAX etc.
-More details can be found [https://modcpp11.blogspot.com/2023/10/numeric-limits.html).
+More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/numeric-limits.html).
 ### valarray
 In C/C++,  fixed size arrays can be allocated on the stack and variable size arrays are allocated on the heap. However this is inflexible and also managing  the array such as adding elements, removing elements or retrieving will require extra code. 
 The standard library provides valarray class is similar to a vector but mathematical functions can be applied directly to all the elements. It also allows to get different cross section of the elements in the valarray including  multidimensional using helper classes.
-More details can be found [https://modcpp11.blogspot.com/2024/09/valarray.html).
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/09/valarray.html).
 
