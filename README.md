@@ -550,16 +550,6 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/shared
 A weak_ptr is a smart pointer that holds a non-owning ("weak") reference to an object that is managed by shared_ptr. It must be converted to shared_ptr in order to access the referenced object.    
 More details can be found [here➹](https://modcpp11.blogspot.com/2025/03/weakptr.html).    
 [TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
-## <span style='color: blue;'>Concurrency:win32</span> ##
-This discusses concurrency objects that are available in Windows win32 API and from standard library.    
-### Execution objects
-These objects execute code in threads, thread pools APC(Asynchronous Process Call) queues.    
-More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Execution).    
-[TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
-### Synchronization objects
-These objects are used by execution objects to provide synchronizations within a process or across. Some provide specialization for reader-writer and producer - consumer scenarios. They include Critical Section,Mutex,Event,Semaphore,Slim Reader/Writer,Conditional Variable,WaitOnAddress,InitOnce,Interlocked functions.    
-More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html).    
-[TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
 ## <span style='color: blue;'>chrono library</span> ##
 Chrono library defines a set of Clocks that can represent a Duration or a specific Time Point. These are used by concurrency object APIs (sleep_for(duration) and sleep_until(time_point)) to pause processing within a thread.    
 ### ratio library
@@ -607,6 +597,16 @@ More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.
 ### Lock free programming
 The synchronization mechanisms discussed earlier uses operating system provided objects using atomic classes which provide interlocked atomic operations.. They include atomic, atomic_flag.    
 More details can be found [here➹](https://modcpp11.blogspot.com/p/concurrency.html#Lock_free).    
+[TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
+## <span style='color: blue;'>Concurrency:win32</span> ##
+This discusses concurrency objects that are available in Windows win32 API and from standard library.    
+### Execution objects
+These objects execute code in threads, thread pools APC(Asynchronous Process Call) queues.    
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Execution).    
+[TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
+### Synchronization objects
+These objects are used by execution objects to provide synchronizations within a process or across. Some provide specialization for reader-writer and producer - consumer scenarios. They include Critical Section,Mutex,Event,Semaphore,Slim Reader/Writer,Conditional Variable,WaitOnAddress,InitOnce,Interlocked functions.    
+More details can be found [here➹](https://modcpp11.blogspot.com/2024/11/win32-synchronization-objects.html#Synchronization).    
 [TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
 ## <span style='color: blue;'>Numerical Library</span> ##
 Standard Library provides classes such as bitset to handle bits, valarray to handle matrix operations. random number generators and distributions.    
