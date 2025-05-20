@@ -623,4 +623,8 @@ More details can be found [here➹](https://modcpp11.blogspot.com/2023/10/numeri
 The standard library provides valarray class is similar to a vector but mathematical functions can be applied directly to all the elements. It also allows to get different cross section of the elements in the valarray including multidimensional using helper classes.    
 More details can be found [here➹](https://modcpp11.blogspot.com/2024/09/valarray.html).    
 [TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
+### Random number Engines and Distributions
+CRT provides limited capability of generating random numbers based on a seed. In C++ 11 numerous random number engines and distributions were introduced.
+More details can be found [here➹](https://modcpp11.blogspot.com/2025/05/defaultrandomengine.html).    
+[TOC↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
 
