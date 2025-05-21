@@ -1,4 +1,4 @@
-# Modern C++ #
+# Modern C++ (11-14)#
 *Discusses some of the regular and C++ 11 and 14 features*
 ## TOC ##
 |||||
