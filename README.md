@@ -13,7 +13,7 @@ The following discusses some of the new features introduced in C++11 and 14.
 ### auto
 The auto keyword is remnant of C that was used to declare local variable in a function. In C++ it has a different meaning and is used to assign a data type based on initialized value.  
 More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language-support.html#auto).    
-[TOC ↑](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
+[TOC #↑#](https://github.com/VedavyasaRao/ModernCPP?tab=readme-ov-file#toc).
 ### decltype
 decltype is reverse of auto where a data type can be deduced from a variable or an expression. decltype can also be used specify return types in template functions.  
 More details can be found [here➹](https://modcpp11.blogspot.com/p/new-language-support.html#decltype).    
